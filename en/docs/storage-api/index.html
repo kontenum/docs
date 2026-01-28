@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storage API | Knowledge Base</title>
+    <meta name="description" content="Kontenum CDN Documentation">
+    <link rel="stylesheet" href="https://node.kontenum.id/dist/css/main.css">
+    <link rel="stylesheet" href="https://node.kontenum.id/dist/css/fonts/inter.css">
+    <link rel="stylesheet" href="/assets/css/custom.css?v=0e711ac5">
+    <link rel="alternate" hreflang="en" href="/en/docs/storage-api/">
+    <link rel="alternate" hreflang="id" href="/id/docs/storage-api/">
+    <link rel="icon" type="image/png" href="https://node.kontenum.id/dist/img/favicon.ico">
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-W6BKZWTJ');</script>
+</head>
+<body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W6BKZWTJ"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <div class="page">
+        <header class="navbar navbar-expand-md navbar-dark d-print-none">
+            <div class="container-xl">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3">
+                    <a href="/en/">
+                        <img src="https://node.kontenum.id/dist/img/logo.PNG" alt="Kontenum" class="navbar-brand-image">
+                    </a>
+                </div>
+                <div class="navbar-nav flex-row order-md-last">
+                    <div class="nav-item dropdown lang-switcher">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                            <i class="ti ti-language ti-light"></i>
+                            <span class="d-none d-md-inline ms-1">English</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <a class="dropdown-item active" href="/en/docs/storage-api/">
+                                <i class="ti ti-check me-2"></i>English
+                            </a>
+                            <a class="dropdown-item " href="/id/docs/storage-api/">
+                                Bahasa Indonesia
+                            </a>
+                        </div>
+                    </div>
+                    <div class="nav-item">
+                        <a href="https://www.kontenum.com" class="nav-link">
+                            <i class="ti ti-home ti-light"></i>
+                            <span class="d-none d-md-inline ms-1">Main Site</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="collapse navbar-collapse" id="navbar-menu">
+                    <div class="d-flex flex-column flex-md-row flex-fill align-items-stretch align-items-md-center">
+                        <ul class="navbar-nav">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="/en/">
+                                    <span class="nav-link-icon  d-md-none d-lg-inline-block">
+                                        <i class="ti ti-book icon ti-light"></i>
+                                    </span>
+                                    <span class="nav-link-title">Knowledge Base</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="page-wrapper">
+            <div class="page-body">
+                <div class="container-xl">
+                    <div class="row g-4">
+                        <div class="col-md-3">
+                            
+                                <div class="kb-sidebar">
+    <div class="mb-3 position-relative">
+        <input type="text" class="form-control search-input" placeholder="Search docs..." autocomplete="off">
+    </div>
+    
+    
+    <div class="mb-4">
+        <h4 class="text-muted text-uppercase small mb-2">Getting Started</h4>
+        <nav class="nav flex-column">
+            
+            <a class="nav-link" href="/en/docs/getting-started/">
+                <i class="ti ti-rocket me-2"></i>Quick Start
+            </a>
+            
+            <a class="nav-link" href="/en/docs/configuration/">
+                <i class="ti ti-settings me-2"></i>Configuration
+            </a>
+            
+            <a class="nav-link" href="/en/docs/ssl-https-setup/">
+                <i class="ti ti-certificate me-2"></i>SSL &amp; HTTPS Setup
+            </a>
+            
+            <a class="nav-link" href="/en/docs/cache-purge/">
+                <i class="ti ti-recycle me-2"></i>Cache Purge
+            </a>
+            
+            <a class="nav-link" href="/en/docs/metrics/">
+                <i class="ti ti-chart-bar me-2"></i>Metrics
+            </a>
+            
+        </nav>
+    </div>
+    
+    <div class="mb-4">
+        <h4 class="text-muted text-uppercase small mb-2">Storage</h4>
+        <nav class="nav flex-column">
+            
+            <a class="nav-link" href="/en/docs/storage-overview/">
+                <i class="ti ti-database me-2"></i>Storage Overview
+            </a>
+            
+            <a class="nav-link" href="/en/docs/storage-explorer/">
+                <i class="ti ti-database-search me-2"></i>Storage Explorer
+            </a>
+            
+            <a class="nav-link active" href="/en/docs/storage-api/">
+                <i class="ti ti-database-cog me-2"></i>Storage API
+            </a>
+            
+            <a class="nav-link" href="/en/docs/storage-utilization/">
+                <i class="ti ti-database-dollar me-2"></i>Storage Metrics
+            </a>
+            
+        </nav>
+    </div>
+    
+    <div class="mb-4">
+        <h4 class="text-muted text-uppercase small mb-2">Features</h4>
+        <nav class="nav flex-column">
+            
+            <a class="nav-link" href="/en/docs/features-image-optimization/">
+                <i class="ti ti-photo me-2"></i>Image Optimization
+            </a>
+            
+        </nav>
+    </div>
+    
+</div>
+                            
+                        </div>
+                        <div class="col-md-7">
+                            <div class="card card-lg">
+                                <div class="card-body">
+                                    <div id="content-scrollspy">
+                                        <div class="kb-content">
+    <div class="card-title mb-4">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/en/">Home</a></li>
+                <li class="breadcrumb-item active">Storage API</li>
+            </ol>
+        </nav>
+    </div>
+<h1>Kontenum Storage API</h1>
+<h2>Overview</h2>
+<p>Kontenum's object storage service is built to be <strong>100% bit-compatible with AWS S3</strong>. This means any existing AWS S3-compatible application, SDK, or gateway device will work seamlessly with Kontenum.</p>
+<p>In some cases, Kontenum provides additional functionality or implements certain behaviors differently from AWS S3. This document highlights those differences and explains how to use the Kontenum S3 API effectively.</p>
+<p>Because of this compatibility, <strong>AWS S3 documentation should be treated as a complementary reference</strong> when working with Kontenum.</p>
+<hr>
+<h2>Reference Specifications</h2>
+<p>The AWS S3 capabilities referenced in this guide are based on:</p>
+<ul>
+<li><strong>API Version:</strong> 2006-03-01</li>
+<li><strong>AWS Reference:</strong> <a href="http://docs.aws.amazon.com/AmazonS3/latest/API/s3-api.pdf">Amazon Simple Storage Service API Reference</a></li>
+</ul>
+<p>Throughout this guide:</p>
+<ul>
+<li><strong>&quot;Kontenum&quot;</strong> refers to Kontenum S3 functionality</li>
+<li><strong>&quot;AWS S3&quot;</strong> refers to the original AWS S3 API behavior</li>
+</ul>
+<hr>
+<h2>API Limitations</h2>
+<p>Please note that Kontenum S3 API has certain limitations compared to AWS S3. These are intentional design choices aligned with Kontenum's CDN‑origin use case.</p>
+<hr>
+<h2>Access Keys and Authentication</h2>
+<h3>Generating Access Keys</h3>
+<p>You can generate, view, rotate, and delete access keys through the <strong>Kontenum Console → Storage Access Keys</strong> section.</p>
+<blockquote>
+<p>📌 <strong>Note:</strong> Each account can have a maximum of <strong>two active access keys</strong> at any given time.</p>
+</blockquote>
+<p><img src="/assets/images/storage-access-keys.png" alt="Storage Access Keys"></p>
+<blockquote>
+<p>Tips:</p>
+<ul>
+<li>Store your <strong>Secret Access Key</strong> securely, as it is only shown once during key creation.</li>
+<li>Rotate keys regularly for enhanced security.</li>
+<li>Delete unused keys to minimize security risks.</li>
+<li>If you want to rotate your keys, you should first create a new key, update your applications to use the new key, set old key inactive, monitor your applications, and then delete the old key.</li>
+</ul>
+</blockquote>
+<hr>
+<h3>Authentication Method</h3>
+<p>All API requests are authenticated via the <strong>Authorization HTTP header</strong>.</p>
+<p>Format:</p>
+<pre><code>Authorization: &lt;ACCESS_KEY&gt;:&lt;SECRET_KEY&gt;
+</code></pre>
+<p>Both the <strong>Access Key</strong> and <strong>Secret Key</strong> are required to sign requests.</p>
+<hr>
+<h3>Security Best Practices</h3>
+<ul>
+<li>Never share your <strong>Secret Access Key</strong> with anyone</li>
+<li>Rotate access keys regularly</li>
+<li>Store keys securely in server-side configuration</li>
+<li><strong>Do not</strong> embed keys in browser-side JavaScript or other untrusted environments</li>
+</ul>
+<hr>
+<h2>Protocol Support</h2>
+<p>Kontenum S3 supports:</p>
+<ul>
+<li><strong>HTTP</strong></li>
+<li><strong>HTTPS</strong> (recommended for production environments)</li>
+</ul>
+<p>Choose the protocol that best fits your security and performance requirements.</p>
+<hr>
+<h2>Access Control Behavior</h2>
+<h3>Read Access Restriction</h3>
+<p><code>GetObject</code> (READ access) is <strong>disabled</strong> via the S3 API.</p>
+<p>This is by design, as Kontenum Storage is optimized for <strong>CDN origin use cases</strong>.</p>
+<p>You can still:</p>
+<ul>
+<li>Download objects using the <strong>Storage Explorer</strong> feature in the Kontenum Console</li>
+</ul>
+<hr>
+<h2>Host Designation</h2>
+<p>Kontenum supports both AWS S3 request styles:</p>
+<ul>
+<li><strong>Path-style requests</strong></li>
+<li><strong>Virtual-hosted–style requests</strong></li>
+</ul>
+<p>Example host:</p>
+<pre><code>s3.kontenum.com
+</code></pre>
+<h3>Recommended Style</h3>
+<p>Kontenum <strong>recommends path-style requests</strong> for maximum flexibility:</p>
+<pre><code>https://s3.kontenum.com/my-bucket/my-object
+</code></pre>
+<p>Path-style avoids domain and certificate limitations related to bucket naming.</p>
+<hr>
+<h2>Error Responses</h2>
+<p>Wherever possible, Kontenum returns <strong>identical error responses</strong> to AWS S3, ensuring compatibility with existing AWS S3 tooling and SDKs.</p>
+<hr>
+<h2>Request Signing and Authentication</h2>
+<p>Kontenum supports the same request signing mechanisms as AWS S3:</p>
+<h3>Supported Signature Versions</h3>
+<ul>
+<li><strong>Signature Version 2</strong></li>
+<li><strong>Signature Version 4</strong></li>
+</ul>
+<p>Both header-based and query-parameter–based signing are supported.</p>
+<hr>
+<h3>Signature Version 4</h3>
+<ul>
+<li>Offers stronger security</li>
+<li>Requires SHA256 hashing</li>
+<li>Slightly higher compute cost</li>
+<li>All regions are supported</li>
+<li>Default AWS region: <code>us-east-1</code></li>
+</ul>
+<p>Recommended for security-sensitive workloads.</p>
+<hr>
+<h3>Signature Version 2</h3>
+<ul>
+<li>Faster signing and verification</li>
+<li>Suitable for performance-critical applications</li>
+<li>Data integrity can be verified using the returned <strong>ETag (MD5 hash)</strong></li>
+</ul>
+<h4>Additional Subresource Parameters</h4>
+<p>Kontenum extends Signature Version 2 with additional query subresources:</p>
+<ul>
+<li><code>append</code></li>
+<li><code>compose</code></li>
+<li><code>force_delete=true</code></li>
+</ul>
+<p>These parameters apply to:</p>
+<ul>
+<li><code>PutObject</code></li>
+<li><code>DeleteBucket</code></li>
+</ul>
+<p>When using Signature Version 2, these subresources <strong>must be included in the signing calculation</strong>.</p>
+<hr>
+<h3>Unsupported Operations</h3>
+<p>Kontenum does <strong>not</strong> support:</p>
+<ul>
+<li>Browser-based uploads</li>
+<li>HTML form–based S3 uploads</li>
+</ul>
+<p>These operations are intended for web page workflows, which are not currently supported by Kontenum.</p>
+<hr>
+<h2>Summary</h2>
+<p>Kontenum S3 is fully compatible with AWS S3 while being optimized for CDN-origin workloads. Existing AWS S3 applications can be used with minimal or no changes, while keeping in mind Kontenum's specific access restrictions and signing behaviors.</p>
+<p>For general S3 usage patterns, always refer to official AWS S3 documentation alongside this guide.</p>
+</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 d-none d-md-block">
+                            <nav class="kb-toc">
+                                <h6 class="text-muted text-uppercase small mb-3">
+                                    On This Page
+                                </h6>
+                                <nav class="nav flex-column" id="toc-nav">
+                                    
+                                    <a class="nav-link toc-link" href="#overview">Overview</a>
+                                    
+                                    <a class="nav-link toc-link" href="#reference-specifications">Reference Specifications</a>
+                                    
+                                    <a class="nav-link toc-link" href="#api-limitations">API Limitations</a>
+                                    
+                                    <a class="nav-link toc-link" href="#access-keys-and-authentication">Access Keys and Authentication</a>
+                                    
+                                    <a class="nav-link toc-link" href="#protocol-support">Protocol Support</a>
+                                    
+                                    <a class="nav-link toc-link" href="#access-control-behavior">Access Control Behavior</a>
+                                    
+                                    <a class="nav-link toc-link" href="#host-designation">Host Designation</a>
+                                    
+                                    <a class="nav-link toc-link" href="#error-responses">Error Responses</a>
+                                    
+                                    <a class="nav-link toc-link" href="#request-signing-and-authentication">Request Signing and Authentication</a>
+                                    
+                                    <a class="nav-link toc-link" href="#summary">Summary</a>
+                                    
+                                </nav>
+                            </nav>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://node.kontenum.id/dist/js/vendor.js"></script>
+    <script src="/assets/js/app.js?v=5f386d5c"></script>
+    <script src="/assets/js/search.js?v=5708de1d"></script>
+</body>
+</html>

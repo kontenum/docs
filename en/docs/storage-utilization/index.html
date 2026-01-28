@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storage Utilization | Knowledge Base</title>
+    <meta name="description" content="Kontenum CDN Documentation">
+    <link rel="stylesheet" href="https://node.kontenum.id/dist/css/main.css">
+    <link rel="stylesheet" href="https://node.kontenum.id/dist/css/fonts/inter.css">
+    <link rel="stylesheet" href="/assets/css/custom.css?v=0e711ac5">
+    <link rel="alternate" hreflang="en" href="/en/docs/storage-utilization/">
+    <link rel="alternate" hreflang="id" href="/id/docs/storage-utilization/">
+    <link rel="icon" type="image/png" href="https://node.kontenum.id/dist/img/favicon.ico">
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-W6BKZWTJ');</script>
+</head>
+<body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W6BKZWTJ"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <div class="page">
+        <header class="navbar navbar-expand-md navbar-dark d-print-none">
+            <div class="container-xl">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3">
+                    <a href="/en/">
+                        <img src="https://node.kontenum.id/dist/img/logo.PNG" alt="Kontenum" class="navbar-brand-image">
+                    </a>
+                </div>
+                <div class="navbar-nav flex-row order-md-last">
+                    <div class="nav-item dropdown lang-switcher">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                            <i class="ti ti-language ti-light"></i>
+                            <span class="d-none d-md-inline ms-1">English</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <a class="dropdown-item active" href="/en/docs/storage-utilization/">
+                                <i class="ti ti-check me-2"></i>English
+                            </a>
+                            <a class="dropdown-item " href="/id/docs/storage-utilization/">
+                                Bahasa Indonesia
+                            </a>
+                        </div>
+                    </div>
+                    <div class="nav-item">
+                        <a href="https://www.kontenum.com" class="nav-link">
+                            <i class="ti ti-home ti-light"></i>
+                            <span class="d-none d-md-inline ms-1">Main Site</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="collapse navbar-collapse" id="navbar-menu">
+                    <div class="d-flex flex-column flex-md-row flex-fill align-items-stretch align-items-md-center">
+                        <ul class="navbar-nav">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="/en/">
+                                    <span class="nav-link-icon  d-md-none d-lg-inline-block">
+                                        <i class="ti ti-book icon ti-light"></i>
+                                    </span>
+                                    <span class="nav-link-title">Knowledge Base</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="page-wrapper">
+            <div class="page-body">
+                <div class="container-xl">
+                    <div class="row g-4">
+                        <div class="col-md-3">
+                            
+                                <div class="kb-sidebar">
+    <div class="mb-3 position-relative">
+        <input type="text" class="form-control search-input" placeholder="Search docs..." autocomplete="off">
+    </div>
+    
+    
+    <div class="mb-4">
+        <h4 class="text-muted text-uppercase small mb-2">Getting Started</h4>
+        <nav class="nav flex-column">
+            
+            <a class="nav-link" href="/en/docs/getting-started/">
+                <i class="ti ti-rocket me-2"></i>Quick Start
+            </a>
+            
+            <a class="nav-link" href="/en/docs/configuration/">
+                <i class="ti ti-settings me-2"></i>Configuration
+            </a>
+            
+            <a class="nav-link" href="/en/docs/ssl-https-setup/">
+                <i class="ti ti-certificate me-2"></i>SSL &amp; HTTPS Setup
+            </a>
+            
+            <a class="nav-link" href="/en/docs/cache-purge/">
+                <i class="ti ti-recycle me-2"></i>Cache Purge
+            </a>
+            
+            <a class="nav-link" href="/en/docs/metrics/">
+                <i class="ti ti-chart-bar me-2"></i>Metrics
+            </a>
+            
+        </nav>
+    </div>
+    
+    <div class="mb-4">
+        <h4 class="text-muted text-uppercase small mb-2">Storage</h4>
+        <nav class="nav flex-column">
+            
+            <a class="nav-link" href="/en/docs/storage-overview/">
+                <i class="ti ti-database me-2"></i>Storage Overview
+            </a>
+            
+            <a class="nav-link" href="/en/docs/storage-explorer/">
+                <i class="ti ti-database-search me-2"></i>Storage Explorer
+            </a>
+            
+            <a class="nav-link" href="/en/docs/storage-api/">
+                <i class="ti ti-database-cog me-2"></i>Storage API
+            </a>
+            
+            <a class="nav-link active" href="/en/docs/storage-utilization/">
+                <i class="ti ti-database-dollar me-2"></i>Storage Metrics
+            </a>
+            
+        </nav>
+    </div>
+    
+    <div class="mb-4">
+        <h4 class="text-muted text-uppercase small mb-2">Features</h4>
+        <nav class="nav flex-column">
+            
+            <a class="nav-link" href="/en/docs/features-image-optimization/">
+                <i class="ti ti-photo me-2"></i>Image Optimization
+            </a>
+            
+        </nav>
+    </div>
+    
+</div>
+                            
+                        </div>
+                        <div class="col-md-7">
+                            <div class="card card-lg">
+                                <div class="card-body">
+                                    <div id="content-scrollspy">
+                                        <div class="kb-content">
+    <div class="card-title mb-4">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/en/">Home</a></li>
+                <li class="breadcrumb-item active">Storage Utilization</li>
+            </ol>
+        </nav>
+    </div>
+<h1>Storage Utilization</h1>
+<p>The <strong>Storage Utilization</strong> page provides visibility into how much object storage your organization consumes over time. This view is used primarily for <strong>usage tracking and billing reference</strong>.</p>
+<p><img src="/assets/images/storage-utilization.png" alt="Storage Utilization"></p>
+<hr>
+<h2>Daily Calculation Model</h2>
+<ul>
+<li>Storage metrics are <strong>calculated once per day</strong>, at the <strong>end of each day</strong>.</li>
+<li>Values shown represent a <strong>daily snapshot</strong>, not real-time usage.</li>
+<li>Changes made during the current day (uploads or deletions) will be reflected <strong>after the daily calculation completes</strong>.</li>
+</ul>
+<hr>
+<h2>Storage Categories</h2>
+<p>Storage utilization is broken down into the following components:</p>
+<h3>Total Storage</h3>
+<ul>
+<li>Represents the <strong>sum of Active Storage and Deleted Storage</strong>.</li>
+<li>This value is used as the basis for <strong>monthly storage billing</strong>.</li>
+</ul>
+<h3>Active Storage</h3>
+<ul>
+<li>Size of all <strong>currently existing objects</strong> in the bucket.</li>
+<li>Includes all live objects accessible via CDN or S3 API.</li>
+</ul>
+<h3>Deleted Storage</h3>
+<ul>
+<li>Size of objects that have been deleted but are still within the <strong>90-day retention period</strong>.</li>
+<li>Deleted storage continues to count toward <strong>total storage usage</strong> until permanently expired.</li>
+</ul>
+<h3>Total Objects</h3>
+<ul>
+<li>Number of objects currently stored (active objects only).</li>
+<li>Deleted objects are not included in this count.</li>
+</ul>
+<hr>
+<h2>Utilization Breakdown Chart</h2>
+<p>The chart displays daily storage usage for the selected month:</p>
+<ul>
+<li><strong>Total Storage</strong> – combined active and deleted storage</li>
+<li><strong>Active Objects</strong> – live object storage size</li>
+<li><strong>Deleted Objects</strong> – retained deleted object storage size</li>
+</ul>
+<p>Hovering over a specific date reveals the exact values recorded for that day.</p>
+<hr>
+<h2>Monthly View</h2>
+<ul>
+<li>Storage utilization is displayed <strong>per calendar month</strong>.</li>
+<li>You can switch months to review historical storage growth or deletion patterns.</li>
+<li>Early-month values may appear low if objects were uploaded later in the month.</li>
+</ul>
+<hr>
+<h2>Unit Conversion (Base-2)</h2>
+<p>All storage values use <strong>base-2 (binary) conversion</strong>, consistent with object storage standards:</p>
+<ul>
+<li>1 GB = 1024 MB</li>
+<li>1 MB = 1024 KB</li>
+<li>1 KB = 1024 Bytes</li>
+<li>1 GB = <strong>1,073,741,824 Bytes</strong></li>
+</ul>
+<p>This differs from <strong>bandwidth and traffic metrics</strong>, which use base-10 conversion.</p>
+<hr>
+<h2>Billing Implications</h2>
+<ul>
+<li>Daily storage values are accumulated to calculate <strong>monthly storage usage</strong>.</li>
+<li>Both Active Storage and Deleted Storage contribute to billing totals.</li>
+<li>Uploading objects late in the month results in <strong>partial-month billing</strong>, proportional to remaining days.</li>
+</ul>
+<hr>
+<h2>Key Notes</h2>
+<ul>
+<li>Storage utilization is <strong>not real-time</strong>.</li>
+<li>Deleted storage impacts cost until the retention period expires.</li>
+<li>Use this page to monitor storage growth trends and deletion behavior over time.</li>
+</ul>
+</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 d-none d-md-block">
+                            <nav class="kb-toc">
+                                <h6 class="text-muted text-uppercase small mb-3">
+                                    On This Page
+                                </h6>
+                                <nav class="nav flex-column" id="toc-nav">
+                                    
+                                    <a class="nav-link toc-link" href="#daily-calculation-model">Daily Calculation Model</a>
+                                    
+                                    <a class="nav-link toc-link" href="#storage-categories">Storage Categories</a>
+                                    
+                                    <a class="nav-link toc-link" href="#utilization-breakdown-chart">Utilization Breakdown Chart</a>
+                                    
+                                    <a class="nav-link toc-link" href="#monthly-view">Monthly View</a>
+                                    
+                                    <a class="nav-link toc-link" href="#unit-conversion-base-2">Unit Conversion (Base-2)</a>
+                                    
+                                    <a class="nav-link toc-link" href="#billing-implications">Billing Implications</a>
+                                    
+                                    <a class="nav-link toc-link" href="#key-notes">Key Notes</a>
+                                    
+                                </nav>
+                            </nav>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://node.kontenum.id/dist/js/vendor.js"></script>
+    <script src="/assets/js/app.js?v=5f386d5c"></script>
+    <script src="/assets/js/search.js?v=5708de1d"></script>
+</body>
+</html>
