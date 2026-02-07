@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="id" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konfigurasi Lanjutan | Basis Pengetahuan</title>
+    <meta name="description" content="Dokumentasi Kontenum CDN">
+    <link rel="stylesheet" href="https://node.kontenum.id/dist/css/main.css">
+    <link rel="stylesheet" href="https://node.kontenum.id/dist/css/fonts/inter.css">
+    <link rel="stylesheet" href="/assets/css/custom.css?v=0e711ac5">
+    <link rel="alternate" hreflang="en" href="/en/docs/configuration/">
+    <link rel="alternate" hreflang="id" href="/id/docs/configuration/">
+    <link rel="icon" type="image/png" href="https://node.kontenum.id/dist/img/favicon.ico">
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-W6BKZWTJ');</script>
+</head>
+<body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W6BKZWTJ"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <div class="page">
+        <header class="navbar navbar-expand-md navbar-dark d-print-none">
+            <div class="container-xl">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3">
+                    <a href="/id/">
+                        <img src="https://node.kontenum.id/dist/img/logo.PNG" alt="Kontenum" class="navbar-brand-image">
+                    </a>
+                </div>
+                <div class="navbar-nav flex-row order-md-last">
+                    <div class="nav-item dropdown lang-switcher">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                            <i class="ti ti-language ti-light"></i>
+                            <span class="d-none d-md-inline ms-1">Bahasa Indonesia</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <a class="dropdown-item " href="/en/docs/configuration/">
+                                English
+                            </a>
+                            <a class="dropdown-item active" href="/id/docs/configuration/">
+                                <i class="ti ti-check me-2"></i>Bahasa Indonesia
+                            </a>
+                        </div>
+                    </div>
+                    <div class="nav-item">
+                        <a href="https://www.kontenum.com" class="nav-link">
+                            <i class="ti ti-home ti-light"></i>
+                            <span class="d-none d-md-inline ms-1">Situs Utama</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="collapse navbar-collapse" id="navbar-menu">
+                    <div class="d-flex flex-column flex-md-row flex-fill align-items-stretch align-items-md-center">
+                        <ul class="navbar-nav">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="/id/">
+                                    <span class="nav-link-icon  d-md-none d-lg-inline-block">
+                                        <i class="ti ti-book icon ti-light"></i>
+                                    </span>
+                                    <span class="nav-link-title">Basis Pengetahuan</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="page-wrapper">
+            <div class="page-body">
+                <div class="container-xl">
+                    <div class="row g-4">
+                        <div class="col-md-3">
+                            
+                                <div class="kb-sidebar">
+    <div class="mb-3 position-relative">
+        <input type="text" class="form-control search-input" placeholder="Cari dokumentasi..." autocomplete="off">
+    </div>
+    
+    
+    <div class="mb-4">
+        <h4 class="text-muted text-uppercase small mb-2">Memulai</h4>
+        <nav class="nav flex-column">
+            
+            <a class="nav-link" href="/id/docs/getting-started/">
+                <i class="ti ti-rocket me-2"></i>Panduan Cepat
+            </a>
+            
+            <a class="nav-link active" href="/id/docs/configuration/">
+                <i class="ti ti-settings me-2"></i>Konfigurasi
+            </a>
+            
+            <a class="nav-link" href="/id/docs/ssl-https-setup/">
+                <i class="ti ti-certificate me-2"></i>Pengaturan SSL &amp; HTTPS
+            </a>
+            
+            <a class="nav-link" href="/id/docs/cache-purge/">
+                <i class="ti ti-recycle me-2"></i>Cache Purge
+            </a>
+            
+            <a class="nav-link" href="/id/docs/metrics/">
+                <i class="ti ti-chart-bar me-2"></i>Metrik
+            </a>
+            
+        </nav>
+    </div>
+    
+    <div class="mb-4">
+        <h4 class="text-muted text-uppercase small mb-2">Storage</h4>
+        <nav class="nav flex-column">
+            
+            <a class="nav-link" href="/id/docs/storage-overview/">
+                <i class="ti ti-database me-2"></i>Apa itu Storage
+            </a>
+            
+            <a class="nav-link" href="/id/docs/storage-explorer/">
+                <i class="ti ti-database-search me-2"></i>Storage Explorer
+            </a>
+            
+            <a class="nav-link" href="/id/docs/storage-api/">
+                <i class="ti ti-database-cog me-2"></i>Storage API
+            </a>
+            
+            <a class="nav-link" href="/id/docs/storage-utilization/">
+                <i class="ti ti-database-dollar me-2"></i>Metrik &amp; Statistik
+            </a>
+            
+        </nav>
+    </div>
+    
+    <div class="mb-4">
+        <h4 class="text-muted text-uppercase small mb-2">Fitur</h4>
+        <nav class="nav flex-column">
+            
+            <a class="nav-link" href="/id/docs/features-image-optimization/">
+                <i class="ti ti-photo me-2"></i>Optimisasi Gambar
+            </a>
+            
+        </nav>
+    </div>
+    
+</div>
+                            
+                        </div>
+                        <div class="col-md-7">
+                            <div class="card card-lg">
+                                <div class="card-body">
+                                    <div id="content-scrollspy">
+                                        <div class="kb-content">
+    <div class="card-title mb-4">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/id/">Beranda</a></li>
+                <li class="breadcrumb-item active">Konfigurasi</li>
+            </ol>
+        </nav>
+    </div>
+<h1>Konfigurasi Lanjutan</h1>
+<div class="alert alert-info d-flex align-items-center" role="alert">
+    <i class="ti ti-info-circle me-2"></i>
+    <div>Panduan ini membantu anda mengatur konfigurasi lanjutan untuk <em>Site</em> Kontenum CDN.</div>
+</div>
+<p>Halaman ini menjelaskan opsi yang tersedia saat mengedit sebuah Site di Kontenum CDN. Pengaturan ini memungkinkan anda untuk <em>fine-tune delivery</em>, <em>security</em>, performa, dan kontrol akses untuk site CDN anda dengan lebih detail.</p>
+<blockquote>
+<p>⚠️ <strong>Penting</strong>: Perubahan mungkin memerlukan beberapa menit untuk menyebar di seluruh jaringan CDN.</p>
+</blockquote>
+<hr>
+<h2>Pengaturan Umum</h2>
+<h3>Site Name</h3>
+<p><em>Identifier</em> yang mudah dibaca untuk <em>Site</em> anda.</p>
+<ul>
+<li>Hanya digunakan di dalam <em>console</em></li>
+<li>Tidak memengaruhi <em>traffic</em> atau DNS</li>
+</ul>
+<hr>
+<h3>CNAME Target</h3>
+<p>Ini adalah <strong>endpoint CDN yang dihasilkan sistem</strong> untuk site anda.</p>
+<p>Contoh:</p>
+<pre><code>a0e78ae5870fe.kontenum.id
+</code></pre>
+<p>anda harus mengarahkan <em>Delivery Domain</em> ke Kontenum menggunakan <strong><em>record CNAME</em></strong>.</p>
+<hr>
+<h3>Added On / Last Modified</h3>
+<p>Informasi waktu yang menunjukkan kapan site dibuat dan terakhir diperbarui.</p>
+<hr>
+<h2>Pengaturan Delivery</h2>
+<h3>Delivery Domain</h3>
+<p><em>Domain</em> publik yang digunakan oleh <em>end user</em>.</p>
+<p>Contoh:</p>
+<pre><code>cdn.example.com
+</code></pre>
+<p>Catatan:</p>
+<ul>
+<li>Jika dikosongkan, Kontenum akan secara otomatis menetapkan domain CDN default</li>
+<li>Harus berupa domain yang anda miliki dan dapat dikelola melalui DNS</li>
+</ul>
+<hr>
+<h3>Custom Response Headers</h3>
+<p>Tambahkan <em>custom HTTP headers</em> ke respons yang dikirim ke <em>end user</em>.</p>
+<p>Format:</p>
+<pre><code>Header-Name Header-Value
+</code></pre>
+<p>Contoh:</p>
+<pre><code>X-Frame-Options SAMEORIGIN
+X-CDN-Provider Kontenum
+</code></pre>
+<hr>
+<h3>Header Override Behavior</h3>
+<p>Untuk header standar tertentu, Kontenum akan <strong>menggantikan <em>value</em> yang dikembalikan oleh origin</strong> jika header yang sama didefinisikan sebagai <em>Custom Response Header</em>. Hal ini mencegah duplikasi atau konflik header pada respons akhir.</p>
+<p>Header yang dapat di_override_ meliputi:</p>
+<ul>
+<li><code>Content-Disposition</code></li>
+<li><code>Content-Language</code></li>
+<li><code>Access-Control-Allow-Origin</code></li>
+<li><code>Access-Control-Allow-Headers</code></li>
+<li><code>Access-Control-Allow-Methods</code></li>
+<li><code>Access-Control-Expose-Headers</code></li>
+</ul>
+<p>Jika salah satu header di atas dikonfigurasi dalam <strong>Custom Response Headers</strong>, <em>value</em> yang ditetapkan di sini akan memiliki prioritas atas <em>value</em> yang dikirim oleh server origin.</p>
+<hr>
+<h3>Perlindungan HTTPS Otomatis (Let’s Encrypt)</h3>
+<p>Aktifkan <strong>sertifikat SSL gratis</strong> yang diterbitkan oleh Let’s Encrypt.</p>
+<p>Cara kerja:</p>
+<ol>
+<li>Arahkan <em>Delivery Domain</em> ke CNAME Target</li>
+<li>Aktifkan opsi ini</li>
+<li>Kontenum secara otomatis menerbitkan dan memperbarui sertifikat</li>
+</ol>
+<p>✔ Sertifikat akan diperpanjang otomatis sebelum masa berlaku habis.</p>
+<p>Pelajari lebih lanjut tentang <a href="/id/docs/ssl-https-setup">Pengaturan SSL</a>.</p>
+<hr>
+<h2>Pengaturan Origin</h2>
+<h3>Tipe Origin</h3>
+<p>Menentukan dari mana konten diambil.</p>
+<ul>
+<li><strong>Domain</strong> – Server web atau <em>storage</em> pihak ketiga</li>
+<li><strong>Storage</strong> – <em>Kontenum Object Storage</em></li>
+</ul>
+<hr>
+<h3>Origin</h3>
+<p><em>Hostname</em> dari server origin .</p>
+<p>Contoh:</p>
+<pre><code>origin.example.com
+</code></pre>
+<hr>
+<h3>Origin Path (Opsional)</h3>
+<p>Batasi pengiriman CDN ke sub‑path tertentu.</p>
+<p>Contoh:</p>
+<pre><code>/static/
+</code></pre>
+<hr>
+<h3>Protokol Origin</h3>
+<p>Protokol yang digunakan oleh CDN untuk terhubung ke origin.</p>
+<ul>
+<li><strong>HTTPS</strong> (disarankan)</li>
+<li><strong>HTTP</strong></li>
+</ul>
+<p>Pastikan ini sesuai dengan konfigurasi origin.</p>
+<hr>
+<h3>Request Headers to Origin</h3>
+<p><em>Custom header</em> yang ditambahkan pada request dari CDN ke origin.</p>
+<p>Contoh:</p>
+<pre><code>X-Forwarded-Proto https
+X-Custom-Origin-Header value
+</code></pre>
+<hr>
+<h2>Pengaturan Keamanan</h2>
+<h3>Pembatasan Geo</h3>
+<p>Batasi akses berdasarkan lokasi pengguna.</p>
+<p>Mode:</p>
+<ul>
+<li>Off (tidak aktif)</li>
+<li>By Country Code (berdasarkan kode negara) <a href="https://www.geonames.org/countries/">(ISO 3166‑1 alpha‑2)</a></li>
+<li>By Continent Code (berdasarkan kode benua)</li>
+</ul>
+<p>Contoh:</p>
+<pre><code>ID
+SG
+</code></pre>
+<hr>
+<h3>Pembatasan IP</h3>
+<p>Batasi akses berdasarkan alamat IP.</p>
+<p>Mode:</p>
+<ul>
+<li>Allow from list (izinkan dari daftar)</li>
+<li>Deny from list (tolak dari daftar)</li>
+</ul>
+<p>Mendukung:</p>
+<ul>
+<li>Single IP</li>
+<li>CIDR ranges</li>
+</ul>
+<p>Contoh:</p>
+<pre><code>8.8.8.8
+8.8.8.0/24
+</code></pre>
+<hr>
+<h3>Pembatasan Referrer</h3>
+<p>Izinkan atau tolak permintaan berdasarkan header <code>Referer</code>.</p>
+<p>Contoh:</p>
+<pre><code>none
+*.example.com
+example.*
+</code></pre>
+<hr>
+<h3>Secure Link (Signed URL Protection)</h3>
+<p>Proteksi konten menggunakan URL yang di-<em>signed</em> dengan batas waktu.</p>
+<p>Komponen:</p>
+<ul>
+<li>Secure Link Key (secret)</li>
+<li>Nama Hash (default: <code>md5</code>)</li>
+<li>Timestamp kadaluarsa</li>
+<li>Argumen URL tambahan (opsional)</li>
+</ul>
+<p>Kasus penggunaan:</p>
+<ul>
+<li>Konten privat</li>
+<li>Konten berbayar</li>
+<li>Anti‑hotlinking</li>
+</ul>
+<blockquote>
+<p>Lihat dokumentasi pada halaman <em>Edit Site</em> untuk contoh perintah lengkap.</p>
+</blockquote>
+<hr>
+<h2>Pengaturan Lainnya</h2>
+<h3>Ignore Query Strings in Cache</h3>
+<p>Menyajikan object cache yang sama terlepas dari query parameter pada URL.</p>
+<p>Berguna untuk:</p>
+<ul>
+<li>Aset statis</li>
+<li>Optimasi <em>cache hit</em></li>
+</ul>
+<hr>
+<h3>Enforce HTTPS</h3>
+<p>Mengalihkan semua <em>request</em> HTTP ke HTTPS secara otomatis.</p>
+<p>Direkomendasikan jika SSL sudah diaktifkan.</p>
+<hr>
+<h3>Image Optimization</h3>
+<p>Menyajikan format gambar modern secara otomatis (WebP / AVIF) jika didukung browser.</p>
+<p>Nonaktifkan jika:</p>
+<ul>
+<li>Anda memerlukan format gambar asli</li>
+<li>Aplikasi Anda mengelola optimasi gambar secara manual</li>
+</ul>
+<hr>
+<h2>Konfigurasi Cache</h2>
+<p>Kontenum mengikuti standard HTTP <em>cache header</em> yang dikirim oleh <em>origin server</em>. Artinya, anda punya kontrol penuh atas konten apa yang di-<em>cache</em> dan berapa lama <em>cache</em> tersebut disimpan di CDN.</p>
+<ul>
+<li>Jika origin mengirim <em>cache header</em> seperti  <code>Cache-Control</code> atau <code>Expires</code>, Kontenum akan mengikuti instruksi tersebut sepenuhnya.</li>
+<li>Jika origin <strong>tidak mengirim cache header</strong> apa pun (tidak termasuk <code>no-cache</code> atau <code>no-store</code>), Kontenum akan tetap menyimpan konten tersebut dalam cache dengan <strong>durasi cache default selama 30 hari</strong>.</li>
+</ul>
+<p>Perilaku default ini memberikan performa yang baik secara langsung, namun memungkinkan anda menyesuaikan strategi <em>cache</em> melalui konfigurasi origin.</p>
+<hr>
+<h2>Praktik Terbaik</h2>
+<ul>
+<li>Aktifkan <strong>HTTPS + Auto SSL</strong> untuk semua situs publik</li>
+<li>Gunakan HTTPS untuk origin jika memungkinkan</li>
+<li>Gunakan Secure Links untuk konten privat atau berbayar</li>
+<li>Hindari menonaktifkan cache berdasarkan query string kecuali benar-benar diperlukan</li>
+<li>Atur header cache yang sesuai di origin Anda untuk caching CDN yang optimal</li>
+</ul>
+<hr>
+<p>Butuh bantuan untuk konfigurasi lanjutan?
+Silakan hubungi <a href="mailto:contact@kontenum.com">tim support</a>.</p>
+</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 d-none d-md-block">
+                            <nav class="kb-toc">
+                                <h6 class="text-muted text-uppercase small mb-3">
+                                    Di Halaman Ini
+                                </h6>
+                                <nav class="nav flex-column" id="toc-nav">
+                                    
+                                    <a class="nav-link toc-link" href="#pengaturan-umum">Pengaturan Umum</a>
+                                    
+                                    <a class="nav-link toc-link" href="#pengaturan-delivery">Pengaturan Delivery</a>
+                                    
+                                    <a class="nav-link toc-link" href="#pengaturan-origin">Pengaturan Origin</a>
+                                    
+                                    <a class="nav-link toc-link" href="#pengaturan-keamanan">Pengaturan Keamanan</a>
+                                    
+                                    <a class="nav-link toc-link" href="#pengaturan-lainnya">Pengaturan Lainnya</a>
+                                    
+                                    <a class="nav-link toc-link" href="#konfigurasi-cache">Konfigurasi Cache</a>
+                                    
+                                    <a class="nav-link toc-link" href="#praktik-terbaik">Praktik Terbaik</a>
+                                    
+                                </nav>
+                            </nav>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://node.kontenum.id/dist/js/vendor.js"></script>
+    <script src="/assets/js/app.js?v=5f386d5c"></script>
+    <script src="/assets/js/search.js?v=5708de1d"></script>
+</body>
+</html>

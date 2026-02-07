@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storage Overview | Knowledge Base</title>
+    <meta name="description" content="Kontenum CDN Documentation">
+    <link rel="stylesheet" href="https://node.kontenum.id/dist/css/main.css">
+    <link rel="stylesheet" href="https://node.kontenum.id/dist/css/fonts/inter.css">
+    <link rel="stylesheet" href="/assets/css/custom.css?v=0e711ac5">
+    <link rel="alternate" hreflang="en" href="/en/docs/storage-overview/">
+    <link rel="alternate" hreflang="id" href="/id/docs/storage-overview/">
+    <link rel="icon" type="image/png" href="https://node.kontenum.id/dist/img/favicon.ico">
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-W6BKZWTJ');</script>
+</head>
+<body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W6BKZWTJ"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <div class="page">
+        <header class="navbar navbar-expand-md navbar-dark d-print-none">
+            <div class="container-xl">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3">
+                    <a href="/en/">
+                        <img src="https://node.kontenum.id/dist/img/logo.PNG" alt="Kontenum" class="navbar-brand-image">
+                    </a>
+                </div>
+                <div class="navbar-nav flex-row order-md-last">
+                    <div class="nav-item dropdown lang-switcher">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                            <i class="ti ti-language ti-light"></i>
+                            <span class="d-none d-md-inline ms-1">English</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <a class="dropdown-item active" href="/en/docs/storage-overview/">
+                                <i class="ti ti-check me-2"></i>English
+                            </a>
+                            <a class="dropdown-item " href="/id/docs/storage-overview/">
+                                Bahasa Indonesia
+                            </a>
+                        </div>
+                    </div>
+                    <div class="nav-item">
+                        <a href="https://www.kontenum.com" class="nav-link">
+                            <i class="ti ti-home ti-light"></i>
+                            <span class="d-none d-md-inline ms-1">Main Site</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="collapse navbar-collapse" id="navbar-menu">
+                    <div class="d-flex flex-column flex-md-row flex-fill align-items-stretch align-items-md-center">
+                        <ul class="navbar-nav">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="/en/">
+                                    <span class="nav-link-icon  d-md-none d-lg-inline-block">
+                                        <i class="ti ti-book icon ti-light"></i>
+                                    </span>
+                                    <span class="nav-link-title">Knowledge Base</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="page-wrapper">
+            <div class="page-body">
+                <div class="container-xl">
+                    <div class="row g-4">
+                        <div class="col-md-3">
+                            
+                                <div class="kb-sidebar">
+    <div class="mb-3 position-relative">
+        <input type="text" class="form-control search-input" placeholder="Search docs..." autocomplete="off">
+    </div>
+    
+    
+    <div class="mb-4">
+        <h4 class="text-muted text-uppercase small mb-2">Getting Started</h4>
+        <nav class="nav flex-column">
+            
+            <a class="nav-link" href="/en/docs/getting-started/">
+                <i class="ti ti-rocket me-2"></i>Quick Start
+            </a>
+            
+            <a class="nav-link" href="/en/docs/configuration/">
+                <i class="ti ti-settings me-2"></i>Configuration
+            </a>
+            
+            <a class="nav-link" href="/en/docs/ssl-https-setup/">
+                <i class="ti ti-certificate me-2"></i>SSL &amp; HTTPS Setup
+            </a>
+            
+            <a class="nav-link" href="/en/docs/cache-purge/">
+                <i class="ti ti-recycle me-2"></i>Cache Purge
+            </a>
+            
+            <a class="nav-link" href="/en/docs/metrics/">
+                <i class="ti ti-chart-bar me-2"></i>Metrics
+            </a>
+            
+        </nav>
+    </div>
+    
+    <div class="mb-4">
+        <h4 class="text-muted text-uppercase small mb-2">Storage</h4>
+        <nav class="nav flex-column">
+            
+            <a class="nav-link active" href="/en/docs/storage-overview/">
+                <i class="ti ti-database me-2"></i>Storage Overview
+            </a>
+            
+            <a class="nav-link" href="/en/docs/storage-explorer/">
+                <i class="ti ti-database-search me-2"></i>Storage Explorer
+            </a>
+            
+            <a class="nav-link" href="/en/docs/storage-api/">
+                <i class="ti ti-database-cog me-2"></i>Storage API
+            </a>
+            
+            <a class="nav-link" href="/en/docs/storage-utilization/">
+                <i class="ti ti-database-dollar me-2"></i>Storage Metrics
+            </a>
+            
+        </nav>
+    </div>
+    
+    <div class="mb-4">
+        <h4 class="text-muted text-uppercase small mb-2">Features</h4>
+        <nav class="nav flex-column">
+            
+            <a class="nav-link" href="/en/docs/features-image-optimization/">
+                <i class="ti ti-photo me-2"></i>Image Optimization
+            </a>
+            
+        </nav>
+    </div>
+    
+</div>
+                            
+                        </div>
+                        <div class="col-md-7">
+                            <div class="card card-lg">
+                                <div class="card-body">
+                                    <div id="content-scrollspy">
+                                        <div class="kb-content">
+    <div class="card-title mb-4">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/en/">Home</a></li>
+                <li class="breadcrumb-item active">Storage Overview</li>
+            </ol>
+        </nav>
+    </div>
+<h1>Storage Overview</h1>
+<p>Kontenum provides <strong>S3‑compatible object storage</strong> designed to work seamlessly with your CDN Sites. This page gives a high‑level overview of how Kontenum Storage works, how it is billed, and when it is the right choice for your workload.</p>
+<hr>
+<h2>What is Kontenum Storage?</h2>
+<p>Kontenum Storage is an <strong>S3‑compatible object storage service</strong> tightly integrated with Kontenum CDN.</p>
+<p>Key characteristics:</p>
+<ul>
+<li>Storage is <strong>directly associated with your CDN Site</strong> (not standalone storage)</li>
+<li>Designed for <strong>origin storage</strong> in CDN workflows</li>
+<li>Compatible with <strong>Amazon S3 APIs</strong>, SDKs, and tooling</li>
+</ul>
+<p>If you have worked with Amazon S3 before, Kontenum Storage will feel familiar.</p>
+<hr>
+<h2>Storage Activation</h2>
+<p>By default, <strong>Storage is not enabled</strong> on new accounts.</p>
+<p>To start using Storage:</p>
+<ol>
+<li>Navigate to the <strong>Storage</strong> section in the Kontenum Console</li>
+<li>Review and accept the <strong>Storage &amp; Pricing Agreement</strong></li>
+<li>Storage will be activated for your organization</li>
+</ol>
+<blockquote>
+<p>⚠️ Storage usage incurs cost once enabled. Make sure you understand the pricing model before activation.</p>
+</blockquote>
+<hr>
+<h2>Bucket Model</h2>
+<p>Kontenum uses a <strong>simplified bucket model</strong>:</p>
+<ul>
+<li><strong>1 bucket per organization account</strong></li>
+<li>The bucket can serve multiple Sites within the same organization</li>
+<li>Bucket naming and access are managed automatically</li>
+</ul>
+<p>This approach reduces operational complexity while maintaining compatibility with S3‑based workflows.</p>
+<hr>
+<h2>Storage Pricing &amp; Minimum Commitment</h2>
+<p>Kontenum applies a <strong>minimum storage commitment pricing model</strong>.</p>
+<h3>Minimum Storage Commitment</h3>
+<ul>
+<li><strong>Minimum storage</strong>: 100 GB</li>
+<li><strong>Price</strong>: Rp.200 / GB</li>
+</ul>
+<p>This means:</p>
+<ul>
+<li>If your usage is <strong>below 100 GB</strong>, you are billed for <strong>100 GB</strong></li>
+<li>If your usage is <strong>above 100 GB</strong>, you are billed for <strong>actual usage</strong></li>
+</ul>
+<h3>Pricing Examples</h3>
+<ul>
+<li>
+<p>Usage: <strong>80 GB</strong>
+Cost: <code>100 GB × Rp.200 = Rp.20,000</code></p>
+</li>
+<li>
+<p>Usage: <strong>100 GB</strong>
+Cost: <code>100 GB × Rp.200 = Rp.20,000</code></p>
+</li>
+<li>
+<p>Usage: <strong>101 GB</strong>
+Cost: <code>101 GB × Rp.200 = Rp.20,200</code></p>
+</li>
+</ul>
+<hr>
+<h2>Storage Unit Calculation (Base‑2)</h2>
+<p>Kontenum uses <strong>base‑2 (binary) conversion</strong> for storage measurement:</p>
+<ul>
+<li>1 GB = 1,024 MB</li>
+<li>1 MB = 1,024 KB</li>
+<li>1 KB = 1,024 Bytes</li>
+<li>1 GB = <strong>1,073,741,824 Bytes</strong></li>
+</ul>
+<p>This is consistent with how most object storage systems calculate actual storage usage.</p>
+<hr>
+<h2>Monthly Usage Calculation</h2>
+<p>Storage billing is calculated as the <strong>sum of Active Storage and Deleted Storage usage per month</strong>.</p>
+<h3>How it works</h3>
+<ul>
+<li>Storage usage is calculated <strong>daily</strong></li>
+<li>Daily usage values are <strong>accumulated across the month</strong></li>
+<li>Objects uploaded mid‑month are billed <strong>proportionally</strong></li>
+</ul>
+<h3>Example</h3>
+<ul>
+<li>You upload an object on <strong>day 17</strong> of a 30‑day month</li>
+<li>The object exists for <strong>13 days</strong> in that month</li>
+<li>You are charged for <strong>13 days worth of that object’s size</strong></li>
+</ul>
+<hr>
+<h2>Deleted Object Retention</h2>
+<p>When objects are deleted:</p>
+<ul>
+<li>Deleted objects are <strong>retained for 90 days</strong></li>
+<li>Deleted storage still counts toward <strong>monthly usage</strong> during the retention period</li>
+</ul>
+<blockquote>
+<p>💡 <strong>Recommendation</strong>: Avoid frequent deletion of objects. Kontenum Storage is optimized for long‑lived content rather than rapid create‑and‑delete patterns.</p>
+</blockquote>
+<hr>
+<h2>Object Versioning</h2>
+<ul>
+<li><strong>Versioning is disabled by default</strong></li>
+<li>Versioning can be enabled <strong>by request</strong></li>
+</ul>
+<p>If you require:</p>
+<ul>
+<li>Object recovery</li>
+<li>Protection against accidental overwrites</li>
+<li>Historical object versions</li>
+</ul>
+<p>Please contact Kontenum support to enable versioning.</p>
+<hr>
+<h2>Compatibility with Amazon S3</h2>
+<p>Kontenum Storage is designed to be <strong>API‑compatible with Amazon S3</strong>, including:</p>
+<ul>
+<li>S3 REST API</li>
+<li>AWS SDKs</li>
+<li>Common S3 tools and libraries</li>
+</ul>
+<p>This allows you to:</p>
+<ul>
+<li>Reuse existing applications</li>
+<li>Migrate workloads with minimal changes</li>
+<li>Integrate easily with CI/CD and backup workflows</li>
+</ul>
+<hr>
+<h2>Cost Comparison with AWS S3</h2>
+<h3>Minimum Storage Retention Impact</h3>
+<p>Unlike <strong>AWS S3 Standard</strong>, Kontenum applies a minimum storage commitment. Some AWS storage classes (such as Glacier) have similar retention models, but S3 Standard does not.</p>
+<h3>Cost Behavior Example (100 TB)</h3>
+<ul>
+<li>If <strong>100 TB</strong> is stored for <strong>less than 23 days</strong>:
+<ul>
+<li>AWS S3 may be <strong>cheaper</strong></li>
+<li>Kontenum may be <strong>more expensive</strong></li>
+</ul>
+</li>
+<li>If <strong>100 TB</strong> is stored for <strong>more than 23 days</strong>:
+<ul>
+<li>Kontenum becomes <strong>more cost‑effective</strong></li>
+</ul>
+</li>
+</ul>
+<h3>Long‑Term Cost Advantage</h3>
+<ul>
+<li>After <strong>1 year</strong>, AWS S3 Standard can be <strong>~4× more expensive</strong> than Kontenum</li>
+<li>This does <strong>not include additional AWS charges</strong> such as:
+<ul>
+<li>Egress bandwidth</li>
+<li>API requests</li>
+</ul>
+</li>
+</ul>
+<h3>Summary</h3>
+<ul>
+<li><strong>Short‑lived data (&lt; 23 days)</strong> → AWS S3 may be more cost‑effective</li>
+<li><strong>Long‑lived data (&gt; 23 days)</strong> → Kontenum is typically more cost‑effective</li>
+</ul>
+<p>Kontenum Storage is optimized for <strong>CDN origin storage, static assets, and long‑term content delivery use cases</strong>.</p>
+<hr>
+<h2>Next Steps</h2>
+<ul>
+<li>Configure <a href="/en/docs/storage-api/">S3 access keys</a></li>
+<li>Understand <a href="/en/docs/storage-utilization/">Storage Utilization</a></li>
+</ul>
+</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 d-none d-md-block">
+                            <nav class="kb-toc">
+                                <h6 class="text-muted text-uppercase small mb-3">
+                                    On This Page
+                                </h6>
+                                <nav class="nav flex-column" id="toc-nav">
+                                    
+                                    <a class="nav-link toc-link" href="#what-is-kontenum-storage">What is Kontenum Storage?</a>
+                                    
+                                    <a class="nav-link toc-link" href="#storage-activation">Storage Activation</a>
+                                    
+                                    <a class="nav-link toc-link" href="#bucket-model">Bucket Model</a>
+                                    
+                                    <a class="nav-link toc-link" href="#storage-pricing-minimum-commitment">Storage Pricing &amp; Minimum Commitment</a>
+                                    
+                                    <a class="nav-link toc-link" href="#storage-unit-calculation-base2">Storage Unit Calculation (Base‑2)</a>
+                                    
+                                    <a class="nav-link toc-link" href="#monthly-usage-calculation">Monthly Usage Calculation</a>
+                                    
+                                    <a class="nav-link toc-link" href="#deleted-object-retention">Deleted Object Retention</a>
+                                    
+                                    <a class="nav-link toc-link" href="#object-versioning">Object Versioning</a>
+                                    
+                                    <a class="nav-link toc-link" href="#compatibility-with-amazon-s3">Compatibility with Amazon S3</a>
+                                    
+                                    <a class="nav-link toc-link" href="#cost-comparison-with-aws-s3">Cost Comparison with AWS S3</a>
+                                    
+                                    <a class="nav-link toc-link" href="#next-steps">Next Steps</a>
+                                    
+                                </nav>
+                            </nav>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://node.kontenum.id/dist/js/vendor.js"></script>
+    <script src="/assets/js/app.js?v=5f386d5c"></script>
+    <script src="/assets/js/search.js?v=5708de1d"></script>
+</body>
+</html>

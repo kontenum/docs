@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="id" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cache Purge | Basis Pengetahuan</title>
+    <meta name="description" content="Dokumentasi Kontenum CDN">
+    <link rel="stylesheet" href="https://node.kontenum.id/dist/css/main.css">
+    <link rel="stylesheet" href="https://node.kontenum.id/dist/css/fonts/inter.css">
+    <link rel="stylesheet" href="/assets/css/custom.css?v=0e711ac5">
+    <link rel="alternate" hreflang="en" href="/en/docs/cache-purge/">
+    <link rel="alternate" hreflang="id" href="/id/docs/cache-purge/">
+    <link rel="icon" type="image/png" href="https://node.kontenum.id/dist/img/favicon.ico">
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-W6BKZWTJ');</script>
+</head>
+<body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W6BKZWTJ"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <div class="page">
+        <header class="navbar navbar-expand-md navbar-dark d-print-none">
+            <div class="container-xl">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3">
+                    <a href="/id/">
+                        <img src="https://node.kontenum.id/dist/img/logo.PNG" alt="Kontenum" class="navbar-brand-image">
+                    </a>
+                </div>
+                <div class="navbar-nav flex-row order-md-last">
+                    <div class="nav-item dropdown lang-switcher">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                            <i class="ti ti-language ti-light"></i>
+                            <span class="d-none d-md-inline ms-1">Bahasa Indonesia</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <a class="dropdown-item " href="/en/docs/cache-purge/">
+                                English
+                            </a>
+                            <a class="dropdown-item active" href="/id/docs/cache-purge/">
+                                <i class="ti ti-check me-2"></i>Bahasa Indonesia
+                            </a>
+                        </div>
+                    </div>
+                    <div class="nav-item">
+                        <a href="https://www.kontenum.com" class="nav-link">
+                            <i class="ti ti-home ti-light"></i>
+                            <span class="d-none d-md-inline ms-1">Situs Utama</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="collapse navbar-collapse" id="navbar-menu">
+                    <div class="d-flex flex-column flex-md-row flex-fill align-items-stretch align-items-md-center">
+                        <ul class="navbar-nav">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="/id/">
+                                    <span class="nav-link-icon  d-md-none d-lg-inline-block">
+                                        <i class="ti ti-book icon ti-light"></i>
+                                    </span>
+                                    <span class="nav-link-title">Basis Pengetahuan</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="page-wrapper">
+            <div class="page-body">
+                <div class="container-xl">
+                    <div class="row g-4">
+                        <div class="col-md-3">
+                            
+                                <div class="kb-sidebar">
+    <div class="mb-3 position-relative">
+        <input type="text" class="form-control search-input" placeholder="Cari dokumentasi..." autocomplete="off">
+    </div>
+    
+    
+    <div class="mb-4">
+        <h4 class="text-muted text-uppercase small mb-2">Memulai</h4>
+        <nav class="nav flex-column">
+            
+            <a class="nav-link" href="/id/docs/getting-started/">
+                <i class="ti ti-rocket me-2"></i>Panduan Cepat
+            </a>
+            
+            <a class="nav-link" href="/id/docs/configuration/">
+                <i class="ti ti-settings me-2"></i>Konfigurasi
+            </a>
+            
+            <a class="nav-link" href="/id/docs/ssl-https-setup/">
+                <i class="ti ti-certificate me-2"></i>Pengaturan SSL &amp; HTTPS
+            </a>
+            
+            <a class="nav-link active" href="/id/docs/cache-purge/">
+                <i class="ti ti-recycle me-2"></i>Cache Purge
+            </a>
+            
+            <a class="nav-link" href="/id/docs/metrics/">
+                <i class="ti ti-chart-bar me-2"></i>Metrik
+            </a>
+            
+        </nav>
+    </div>
+    
+    <div class="mb-4">
+        <h4 class="text-muted text-uppercase small mb-2">Storage</h4>
+        <nav class="nav flex-column">
+            
+            <a class="nav-link" href="/id/docs/storage-overview/">
+                <i class="ti ti-database me-2"></i>Apa itu Storage
+            </a>
+            
+            <a class="nav-link" href="/id/docs/storage-explorer/">
+                <i class="ti ti-database-search me-2"></i>Storage Explorer
+            </a>
+            
+            <a class="nav-link" href="/id/docs/storage-api/">
+                <i class="ti ti-database-cog me-2"></i>Storage API
+            </a>
+            
+            <a class="nav-link" href="/id/docs/storage-utilization/">
+                <i class="ti ti-database-dollar me-2"></i>Metrik &amp; Statistik
+            </a>
+            
+        </nav>
+    </div>
+    
+    <div class="mb-4">
+        <h4 class="text-muted text-uppercase small mb-2">Fitur</h4>
+        <nav class="nav flex-column">
+            
+            <a class="nav-link" href="/id/docs/features-image-optimization/">
+                <i class="ti ti-photo me-2"></i>Optimisasi Gambar
+            </a>
+            
+        </nav>
+    </div>
+    
+</div>
+                            
+                        </div>
+                        <div class="col-md-7">
+                            <div class="card card-lg">
+                                <div class="card-body">
+                                    <div id="content-scrollspy">
+                                        <div class="kb-content">
+  <div class="card-title mb-4">
+      <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="/id/">Beranda</a></li>
+              <li class="breadcrumb-item active">Cache Purge</li>
+          </ol>
+      </nav>
+  </div>
+<h1>Cache Purge</h1>
+<p>Fitur <strong>Purge</strong> memungkinkan Anda untuk menghapus konten yang di-cache dari Kontenum CDN sehingga permintaan berikutnya akan mengambil konten baru langsung dari origin Anda.</p>
+<p>Purge berguna ketika Anda:</p>
+<ul>
+<li>Memperbarui file (CSS, JS, gambar, media)</li>
+<li>Menerapkan versi baru aplikasi Anda</li>
+<li>Perlu segera menghapus konten yang usang atau salah</li>
+</ul>
+<hr>
+<h2>Cara Kerja Purge</h2>
+<p>Ketika sebuah URL di-purge:</p>
+<ol>
+<li>Kontenum menghapus objek yang di-cache dari semua lokasi edge</li>
+<li>Permintaan <em>end user</em> berikutnya memicu <strong>pengambilan baru dari origin</strong></li>
+<li>Konten yang diperbarui di-cache kembali berdasarkan aturan caching Anda</li>
+</ol>
+<p>Operasi purge adalah <strong>aman</strong> dan tidak memengaruhi konten di origin storage Anda. Hanya salinan yang di-cache di CDN yang dihapus.</p>
+<hr>
+<h2>Cara Memicu Purge</h2>
+<h3>1. Purge via Console (Web UI)</h3>
+<p>Anda dapat mengirimkan permintaan purge secara manual melalui Kontenum <a href="https://console.kontenum.com/purge/" target="_blank">Console<i class="ti ti-external-link me-2"></i></a>.
+Ini adalah cara tercepat untuk mem-purge URL individual selama <em>development</em> atau pembaruan kecil.</p>
+<h3>2. Purge via API</h3>
+<p>Untuk otomatisasi dan alur kerja CI/CD, purge juga dapat dipicu menggunakan Kontenum <a href="https://console.kontenum.com/documentation/api/" target="_blank">API<i class="ti ti-external-link me-2"></i></a>.</p>
+<p>Menggunakan API memungkinkan Anda untuk:</p>
+<ul>
+<li>Mem-purge konten selama proses deployment</li>
+<li>Mengintegrasikan purge ke dalam pipeline build</li>
+<li>Mem-purge secara massal secara programatis</li>
+</ul>
+<hr>
+<h2>Kolom Input Purge</h2>
+<h3>URL (Required)</h3>
+<p>Kolom <strong>URL</strong> menentukan konten yang di-cache yang harus dihapus.</p>
+<p>Contoh:</p>
+<pre><code>https://example.com/path/to/file.css
+</code></pre>
+<h4>Purge Wildcard Otomatis</h4>
+<p>Kontenum secara otomatis menerapkan wildcard purge berdasarkan URL yang Anda berikan.</p>
+<p>Contoh:</p>
+<pre><code>https://mycdn.example.com/assets/
+</code></pre>
+<p>Akan mem-purge semua file:</p>
+<pre><code>https://mycdn.example.com/assets/*
+</code></pre>
+<p>Semua file yang di-cache di bawah path <code>/assets/</code> akan dihapus.</p>
+<blockquote>
+<p>⚠️ Hati-hati saat mem-purge <em>high-level path</em> , karena ini dapat menghapus banyak objek yang di-cache.</p>
+</blockquote>
+<hr>
+<h3>Origin Header (Optional)</h3>
+<p>Kolom <strong>Origin Header</strong> memungkinkan Anda untuk mem-purge konten yang di-cache secara <strong>selektif</strong> berdasarkan domain origin yang digunakan saat mengambil aset.</p>
+<p><em>Value</em> ini dikirim sebagai <strong>HTTP Origin header</strong> saat CDN melakukan validasi cache.</p>
+<p>Contoh:</p>
+<pre><code>www.kontenum.com
+</code></pre>
+<h4>Kapan Menggunakan Origin Header</h4>
+<p>Gunakan kolom ini ketika:</p>
+<ul>
+<li>Beberapa domain menggunakan delivery domain CDN yang sama</li>
+<li>Anda ingin melakukan purge hanya pada konten yang diambil dari origin tertentu</li>
+<li>Anda menjalankan konfigurasi multi-tenant atau multi-origin</li>
+</ul>
+<p>Jika dibiarkan kosong, purge akan berlaku untuk <strong>semua origin</strong> yang terkait dengan URL tersebut.</p>
+<hr>
+<h2>Praktik Terbaik</h2>
+<ul>
+<li>Lakukan purge pada <strong>path atau file tertentu</strong> daripada seluruh domain jika memungkinkan</li>
+<li>Gunakan purge berbasis API untuk deployment otomatis</li>
+<li>Hindari purge full-path yang terlalu sering pada site dengan trafik tinggi</li>
+<li>Kombinasikan purge dengan header cache-control yang tepat untuk performa optimal</li>
+</ul>
+<hr>
+<h2>Contoh Use Case Umum</h2>
+<table>
+<thead>
+<tr>
+<th>Skenario</th>
+<th>Tindakan yang Disarankan</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Update satu file</td>
+<td>Purge URL file secara spesifik</td>
+</tr>
+<tr>
+<td>Update satu folder</td>
+<td>Purge path folder (wildcard)</td>
+</tr>
+<tr>
+<td>Setup multi-origin</td>
+<td>Gunakan Origin Header</td>
+</tr>
+<tr>
+<td>Deployment CI/CD</td>
+<td>Gunakan Purge API</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2>Catatan</h2>
+<ul>
+<li>Purge hanya memengaruhi <strong>konten yang di-cache</strong>, bukan storage origin</li>
+<li>Konten yang baru diambil akan mengikuti aturan caching situs Anda</li>
+<li>Permintaan purge diproses secara global di seluruh lokasi edge CDN</li>
+</ul>
+<hr>
+<p>Jika Anda membutuhkan bantuan untuk skenario purge lanjutan atau penggunaan API, silakan lihat <a href="https://console.kontenum.com/documentation/api/" target="_blank">dokumentasi API<i class="ti ti-external-link me-2"></i></a> atau hubungi <a href="mailto:support@kontenum.com">tim support</a>.</p>
+</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 d-none d-md-block">
+                            <nav class="kb-toc">
+                                <h6 class="text-muted text-uppercase small mb-3">
+                                    Di Halaman Ini
+                                </h6>
+                                <nav class="nav flex-column" id="toc-nav">
+                                    
+                                    <a class="nav-link toc-link" href="#cara-kerja-purge">Cara Kerja Purge</a>
+                                    
+                                    <a class="nav-link toc-link" href="#cara-memicu-purge">Cara Memicu Purge</a>
+                                    
+                                    <a class="nav-link toc-link" href="#kolom-input-purge">Kolom Input Purge</a>
+                                    
+                                    <a class="nav-link toc-link" href="#praktik-terbaik">Praktik Terbaik</a>
+                                    
+                                    <a class="nav-link toc-link" href="#contoh-use-case-umum">Contoh Use Case Umum</a>
+                                    
+                                    <a class="nav-link toc-link" href="#catatan">Catatan</a>
+                                    
+                                </nav>
+                            </nav>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://node.kontenum.id/dist/js/vendor.js"></script>
+    <script src="/assets/js/app.js?v=5f386d5c"></script>
+    <script src="/assets/js/search.js?v=5708de1d"></script>
+</body>
+</html>

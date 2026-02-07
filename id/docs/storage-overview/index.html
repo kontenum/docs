@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="id" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ringkasan Storage | Basis Pengetahuan</title>
+    <meta name="description" content="Dokumentasi Kontenum CDN">
+    <link rel="stylesheet" href="https://node.kontenum.id/dist/css/main.css">
+    <link rel="stylesheet" href="https://node.kontenum.id/dist/css/fonts/inter.css">
+    <link rel="stylesheet" href="/assets/css/custom.css?v=0e711ac5">
+    <link rel="alternate" hreflang="en" href="/en/docs/storage-overview/">
+    <link rel="alternate" hreflang="id" href="/id/docs/storage-overview/">
+    <link rel="icon" type="image/png" href="https://node.kontenum.id/dist/img/favicon.ico">
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-W6BKZWTJ');</script>
+</head>
+<body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W6BKZWTJ"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <div class="page">
+        <header class="navbar navbar-expand-md navbar-dark d-print-none">
+            <div class="container-xl">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3">
+                    <a href="/id/">
+                        <img src="https://node.kontenum.id/dist/img/logo.PNG" alt="Kontenum" class="navbar-brand-image">
+                    </a>
+                </div>
+                <div class="navbar-nav flex-row order-md-last">
+                    <div class="nav-item dropdown lang-switcher">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                            <i class="ti ti-language ti-light"></i>
+                            <span class="d-none d-md-inline ms-1">Bahasa Indonesia</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <a class="dropdown-item " href="/en/docs/storage-overview/">
+                                English
+                            </a>
+                            <a class="dropdown-item active" href="/id/docs/storage-overview/">
+                                <i class="ti ti-check me-2"></i>Bahasa Indonesia
+                            </a>
+                        </div>
+                    </div>
+                    <div class="nav-item">
+                        <a href="https://www.kontenum.com" class="nav-link">
+                            <i class="ti ti-home ti-light"></i>
+                            <span class="d-none d-md-inline ms-1">Situs Utama</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="collapse navbar-collapse" id="navbar-menu">
+                    <div class="d-flex flex-column flex-md-row flex-fill align-items-stretch align-items-md-center">
+                        <ul class="navbar-nav">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="/id/">
+                                    <span class="nav-link-icon  d-md-none d-lg-inline-block">
+                                        <i class="ti ti-book icon ti-light"></i>
+                                    </span>
+                                    <span class="nav-link-title">Basis Pengetahuan</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="page-wrapper">
+            <div class="page-body">
+                <div class="container-xl">
+                    <div class="row g-4">
+                        <div class="col-md-3">
+                            
+                                <div class="kb-sidebar">
+    <div class="mb-3 position-relative">
+        <input type="text" class="form-control search-input" placeholder="Cari dokumentasi..." autocomplete="off">
+    </div>
+    
+    
+    <div class="mb-4">
+        <h4 class="text-muted text-uppercase small mb-2">Memulai</h4>
+        <nav class="nav flex-column">
+            
+            <a class="nav-link" href="/id/docs/getting-started/">
+                <i class="ti ti-rocket me-2"></i>Panduan Cepat
+            </a>
+            
+            <a class="nav-link" href="/id/docs/configuration/">
+                <i class="ti ti-settings me-2"></i>Konfigurasi
+            </a>
+            
+            <a class="nav-link" href="/id/docs/ssl-https-setup/">
+                <i class="ti ti-certificate me-2"></i>Pengaturan SSL &amp; HTTPS
+            </a>
+            
+            <a class="nav-link" href="/id/docs/cache-purge/">
+                <i class="ti ti-recycle me-2"></i>Cache Purge
+            </a>
+            
+            <a class="nav-link" href="/id/docs/metrics/">
+                <i class="ti ti-chart-bar me-2"></i>Metrik
+            </a>
+            
+        </nav>
+    </div>
+    
+    <div class="mb-4">
+        <h4 class="text-muted text-uppercase small mb-2">Storage</h4>
+        <nav class="nav flex-column">
+            
+            <a class="nav-link active" href="/id/docs/storage-overview/">
+                <i class="ti ti-database me-2"></i>Apa itu Storage
+            </a>
+            
+            <a class="nav-link" href="/id/docs/storage-explorer/">
+                <i class="ti ti-database-search me-2"></i>Storage Explorer
+            </a>
+            
+            <a class="nav-link" href="/id/docs/storage-api/">
+                <i class="ti ti-database-cog me-2"></i>Storage API
+            </a>
+            
+            <a class="nav-link" href="/id/docs/storage-utilization/">
+                <i class="ti ti-database-dollar me-2"></i>Metrik &amp; Statistik
+            </a>
+            
+        </nav>
+    </div>
+    
+    <div class="mb-4">
+        <h4 class="text-muted text-uppercase small mb-2">Fitur</h4>
+        <nav class="nav flex-column">
+            
+            <a class="nav-link" href="/id/docs/features-image-optimization/">
+                <i class="ti ti-photo me-2"></i>Optimisasi Gambar
+            </a>
+            
+        </nav>
+    </div>
+    
+</div>
+                            
+                        </div>
+                        <div class="col-md-7">
+                            <div class="card card-lg">
+                                <div class="card-body">
+                                    <div id="content-scrollspy">
+                                        <div class="kb-content">
+    <div class="card-title mb-4">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/id/">Beranda</a></li>
+                <li class="breadcrumb-item active">Ringkasan Storage</li>
+            </ol>
+        </nav>
+    </div>
+<h1>Ringkasan Storage</h1>
+<p>Kontenum menyediakan <strong>object storage yang kompatibel dengan S3</strong> dan dirancang untuk bekerja secara <em>seamless</em> dengan CDN Site Anda. Dokumen ini memberikan ringkasan tentang cara kerja Kontenum Storage, kalkulasi <em>billing</em>, dan kapan layanan ini menjadi pilihan yang tepat untuk workload Anda.</p>
+<hr>
+<h2>Apa itu Kontenum Storage?</h2>
+<p>Kontenum Storage adalah <strong>layanan object storage kompatibel S3</strong> yang terintegrasi dengan Kontenum CDN.</p>
+<p>Karakteristik utama:</p>
+<ul>
+<li>Storage <strong>terkait langsung dengan CDN Site Anda</strong> (bukan storage <em>standalone</em>)</li>
+<li>Dirancang sebagai <strong>origin storage</strong> dalam alur kerja CDN</li>
+<li>Kompatibel dengan <strong>Amazon S3 API</strong>, SDK, dan <em>tooling</em></li>
+</ul>
+<p>Jika Anda pernah menggunakan Amazon S3 sebelumnya, Kontenum Storage akan terasa familiar.</p>
+<hr>
+<h2>Aktivasi Storage</h2>
+<p>Secara default, <strong>Storage tidak diaktifkan</strong> pada akun baru.</p>
+<p>Untuk mulai menggunakan Storage:</p>
+<ol>
+<li>Buka bagian <strong>Storage</strong> di Kontenum Console</li>
+<li>Tinjau dan setujui <strong>Storage &amp; Pricing Agreement</strong></li>
+<li>Storage akan diaktifkan untuk organisasi Anda</li>
+</ol>
+<blockquote>
+<p>⚠️ Penggunaan Storage akan dikenakan biaya setelah diaktifkan. Pastikan Anda memahami model harga sebelum melakukan aktivasi.</p>
+</blockquote>
+<hr>
+<h2>Model Bucket</h2>
+<p>Kontenum menggunakan <strong>model <em>bucket</em> yang disederhanakan</strong>:</p>
+<ul>
+<li><strong>1 <em>bucket</em> per akun organisasi</strong></li>
+<li>Satu <em>bucket</em> dapat digunakan oleh beberapa Site dalam organisasi yang sama</li>
+<li>Penamaan dan akses <em>bucket</em> dikelola secara otomatis</li>
+</ul>
+<p>Pendekatan ini mengurangi kompleksitas operasional sekaligus tetap mempertahankan kompatibilitas dengan alur kerja berbasis S3.</p>
+<hr>
+<h2>Harga Storage &amp; Komitmen Minimum</h2>
+<p>Kontenum menerapkan <strong>model harga storage dengan komitmen minimum</strong>.</p>
+<h3>Komitmen Storage Minimum</h3>
+<ul>
+<li><strong>Storage minimum</strong>: 100 GB</li>
+<li><strong>Harga</strong>: Rp.200 / GB</li>
+</ul>
+<p>Artinya:</p>
+<ul>
+<li>Jika penggunaan Anda <strong>di bawah 100 GB</strong>, Anda akan dikenakan biaya untuk <strong>100 GB</strong></li>
+<li>Jika penggunaan Anda <strong>di atas 100 GB</strong>, Anda akan dikenakan biaya untuk <strong>penggunaan aktual</strong></li>
+</ul>
+<h3>Contoh Harga</h3>
+<ul>
+<li>
+<p>Penggunaan: <strong>80 GB</strong>
+Biaya: <code>100 GB × Rp.200 = Rp.20,000</code></p>
+</li>
+<li>
+<p>Penggunaan: <strong>100 GB</strong>
+Biaya: <code>100 GB × Rp.200 = Rp.20,000</code></p>
+</li>
+<li>
+<p>Penggunaan: <strong>101 GB</strong>
+Biaya: <code>101 GB × Rp.200 = Rp.20,200</code></p>
+</li>
+</ul>
+<hr>
+<h2>Perhitungan Satuan Storage (Basis-2)</h2>
+<p>Kontenum menggunakan <strong>konversi basis-2 (biner)</strong> untuk pengukuran storage:</p>
+<ul>
+<li>1 GB = 1.024 MB</li>
+<li>1 MB = 1.024 KB</li>
+<li>1 KB = 1.024 Byte</li>
+<li>1 GB = <strong>1.073.741.824 Byte</strong></li>
+</ul>
+<p>Sebagian besar sistem object storage menghitung penggunaan storage aktual dengan cara yang sama.</p>
+<hr>
+<h2>Perhitungan Penggunaan Bulanan</h2>
+<p>Penagihan storage dihitung sebagai <strong>total penggunaan Storage Aktif dan Storage Terhapus per bulan</strong>.</p>
+<h3>Cara Kerja</h3>
+<ul>
+<li>Penggunaan storage dihitung <strong>setiap hari</strong></li>
+<li>Nilai penggunaan harian <strong>diakumulasikan sepanjang bulan</strong></li>
+<li>Objek yang diunggah di tengah bulan akan ditagih <strong>secara proporsional</strong></li>
+</ul>
+<h3>Contoh</h3>
+<ul>
+<li>Anda mengunggah sebuah objek pada <strong>hari ke-17</strong> dari bulan dengan <strong>30 hari</strong></li>
+<li>Objek tersebut ada selama <strong>13 hari</strong> dalam bulan tersebut</li>
+<li>Anda akan dikenakan biaya untuk <strong>13 hari penggunaan ukuran objek tersebut</strong></li>
+</ul>
+<hr>
+<h2>Retensi Objek Terhapus</h2>
+<p>Ketika objek dihapus:</p>
+<ul>
+<li>Objek terhapus akan <strong>disimpan selama 90 hari</strong></li>
+<li>Storage terhapus tetap dihitung sebagai <strong>penggunaan bulanan</strong> selama masa retensi</li>
+</ul>
+<blockquote>
+<p>💡 <strong>Rekomendasi</strong>: Hindari penghapusan objek secara sering. Kontenum Storage dioptimalkan untuk konten jangka panjang, bukan pola <em>create-and-delete</em> yang sering.</p>
+</blockquote>
+<hr>
+<h2>Versioning Objek</h2>
+<ul>
+<li><strong>Versioning dinonaktifkan secara default</strong></li>
+<li>Versioning dapat diaktifkan <strong>berdasarkan permintaan</strong></li>
+</ul>
+<p>Jika Anda memerlukan:</p>
+<ul>
+<li>Pemulihan objek</li>
+<li>Perlindungan dari overwrite tidak sengaja</li>
+<li>Riwayat versi objek</li>
+</ul>
+<p>Silakan hubungi <a href="mailto:support@kontenum.com">tim support Kontenum</a> untuk mengaktifkan versioning.</p>
+<hr>
+<h2>Kompatibilitas dengan Amazon S3</h2>
+<p>Kontenum Storage dirancang agar <strong>kompatibel secara API dengan Amazon S3</strong>, termasuk:</p>
+<ul>
+<li>S3 REST API</li>
+<li>AWS SDK</li>
+<li>Tool dan library S3 umum</li>
+</ul>
+<p>Hal ini memungkinkan Anda untuk:</p>
+<ul>
+<li>Menggunakan kembali aplikasi yang sudah ada</li>
+<li>Melakukan migrasi workload dengan perubahan minimal</li>
+<li>Integrasi mudah dengan CI/CD dan workflow backup</li>
+</ul>
+<hr>
+<h2>Perbandingan Biaya dengan AWS S3</h2>
+<h3>Dampak Komitmen Minimum Storage</h3>
+<p>Berbeda dengan <strong>AWS S3 Standard</strong>, Kontenum menerapkan komitmen minimum storage. Beberapa kelas storage AWS (seperti Glacier) memiliki model retensi serupa, namun S3 Standard tidak.</p>
+<h3>Contoh Perilaku Biaya (100 TB)</h3>
+<ul>
+<li>Jika <strong>100 TB</strong> disimpan selama <strong>kurang dari 23 hari</strong>:
+<ul>
+<li>AWS S3 bisa menjadi <strong>lebih murah</strong></li>
+<li>Kontenum bisa menjadi <strong>lebih mahal</strong></li>
+</ul>
+</li>
+<li>Jika <strong>100 TB</strong> disimpan selama <strong>lebih dari 23 hari</strong>:
+<ul>
+<li>Kontenum menjadi <strong>lebih hemat biaya</strong></li>
+</ul>
+</li>
+</ul>
+<h3>Keuntungan Biaya Jangka Panjang</h3>
+<ul>
+<li>Setelah <strong>1 tahun</strong>, AWS S3 Standard dapat menjadi <strong>~4× lebih mahal</strong> dibanding Kontenum</li>
+<li>Ini <strong>belum termasuk biaya tambahan AWS</strong> seperti:
+<ul>
+<li>Bandwidth egress</li>
+<li>Request API</li>
+</ul>
+</li>
+</ul>
+<h3>Ringkasan</h3>
+<ul>
+<li><strong>Data jangka pendek (&lt; 23 hari)</strong> → AWS S3 mungkin lebih hemat</li>
+<li><strong>Data jangka panjang (&gt; 23 hari)</strong> → Kontenum biasanya lebih hemat</li>
+</ul>
+<p>Kontenum Storage dioptimalkan untuk <strong>CDN origin storage, aset statis, dan use case pengiriman konten jangka panjang</strong>.</p>
+<hr>
+<h2>Langkah Selanjutnya</h2>
+<ul>
+<li>Konfigurasi <a href="/id/docs/storage-api/">S3 access keys</a></li>
+<li>Pelajari  <a href="/id/docs/storage-utilization/">Utilisasi Storage</a></li>
+</ul>
+</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 d-none d-md-block">
+                            <nav class="kb-toc">
+                                <h6 class="text-muted text-uppercase small mb-3">
+                                    Di Halaman Ini
+                                </h6>
+                                <nav class="nav flex-column" id="toc-nav">
+                                    
+                                    <a class="nav-link toc-link" href="#apa-itu-kontenum-storage">Apa itu Kontenum Storage?</a>
+                                    
+                                    <a class="nav-link toc-link" href="#aktivasi-storage">Aktivasi Storage</a>
+                                    
+                                    <a class="nav-link toc-link" href="#model-bucket">Model Bucket</a>
+                                    
+                                    <a class="nav-link toc-link" href="#harga-storage-komitmen-minimum">Harga Storage &amp; Komitmen Minimum</a>
+                                    
+                                    <a class="nav-link toc-link" href="#perhitungan-satuan-storage-basis-2">Perhitungan Satuan Storage (Basis-2)</a>
+                                    
+                                    <a class="nav-link toc-link" href="#perhitungan-penggunaan-bulanan">Perhitungan Penggunaan Bulanan</a>
+                                    
+                                    <a class="nav-link toc-link" href="#retensi-objek-terhapus">Retensi Objek Terhapus</a>
+                                    
+                                    <a class="nav-link toc-link" href="#versioning-objek">Versioning Objek</a>
+                                    
+                                    <a class="nav-link toc-link" href="#kompatibilitas-dengan-amazon-s3">Kompatibilitas dengan Amazon S3</a>
+                                    
+                                    <a class="nav-link toc-link" href="#perbandingan-biaya-dengan-aws-s3">Perbandingan Biaya dengan AWS S3</a>
+                                    
+                                    <a class="nav-link toc-link" href="#langkah-selanjutnya">Langkah Selanjutnya</a>
+                                    
+                                </nav>
+                            </nav>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://node.kontenum.id/dist/js/vendor.js"></script>
+    <script src="/assets/js/app.js?v=5f386d5c"></script>
+    <script src="/assets/js/search.js?v=5708de1d"></script>
+</body>
+</html>

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storage Explorer | Knowledge Base</title>
+    <meta name="description" content="Kontenum CDN Documentation">
+    <link rel="stylesheet" href="https://node.kontenum.id/dist/css/main.css">
+    <link rel="stylesheet" href="https://node.kontenum.id/dist/css/fonts/inter.css">
+    <link rel="stylesheet" href="/assets/css/custom.css?v=0e711ac5">
+    <link rel="alternate" hreflang="en" href="/en/docs/storage-explorer/">
+    <link rel="alternate" hreflang="id" href="/id/docs/storage-explorer/">
+    <link rel="icon" type="image/png" href="https://node.kontenum.id/dist/img/favicon.ico">
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-W6BKZWTJ');</script>
+</head>
+<body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W6BKZWTJ"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <div class="page">
+        <header class="navbar navbar-expand-md navbar-dark d-print-none">
+            <div class="container-xl">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3">
+                    <a href="/en/">
+                        <img src="https://node.kontenum.id/dist/img/logo.PNG" alt="Kontenum" class="navbar-brand-image">
+                    </a>
+                </div>
+                <div class="navbar-nav flex-row order-md-last">
+                    <div class="nav-item dropdown lang-switcher">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                            <i class="ti ti-language ti-light"></i>
+                            <span class="d-none d-md-inline ms-1">English</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <a class="dropdown-item active" href="/en/docs/storage-explorer/">
+                                <i class="ti ti-check me-2"></i>English
+                            </a>
+                            <a class="dropdown-item " href="/id/docs/storage-explorer/">
+                                Bahasa Indonesia
+                            </a>
+                        </div>
+                    </div>
+                    <div class="nav-item">
+                        <a href="https://www.kontenum.com" class="nav-link">
+                            <i class="ti ti-home ti-light"></i>
+                            <span class="d-none d-md-inline ms-1">Main Site</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="collapse navbar-collapse" id="navbar-menu">
+                    <div class="d-flex flex-column flex-md-row flex-fill align-items-stretch align-items-md-center">
+                        <ul class="navbar-nav">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="/en/">
+                                    <span class="nav-link-icon  d-md-none d-lg-inline-block">
+                                        <i class="ti ti-book icon ti-light"></i>
+                                    </span>
+                                    <span class="nav-link-title">Knowledge Base</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="page-wrapper">
+            <div class="page-body">
+                <div class="container-xl">
+                    <div class="row g-4">
+                        <div class="col-md-3">
+                            
+                                <div class="kb-sidebar">
+    <div class="mb-3 position-relative">
+        <input type="text" class="form-control search-input" placeholder="Search docs..." autocomplete="off">
+    </div>
+    
+    
+    <div class="mb-4">
+        <h4 class="text-muted text-uppercase small mb-2">Getting Started</h4>
+        <nav class="nav flex-column">
+            
+            <a class="nav-link" href="/en/docs/getting-started/">
+                <i class="ti ti-rocket me-2"></i>Quick Start
+            </a>
+            
+            <a class="nav-link" href="/en/docs/configuration/">
+                <i class="ti ti-settings me-2"></i>Configuration
+            </a>
+            
+            <a class="nav-link" href="/en/docs/ssl-https-setup/">
+                <i class="ti ti-certificate me-2"></i>SSL &amp; HTTPS Setup
+            </a>
+            
+            <a class="nav-link" href="/en/docs/cache-purge/">
+                <i class="ti ti-recycle me-2"></i>Cache Purge
+            </a>
+            
+            <a class="nav-link" href="/en/docs/metrics/">
+                <i class="ti ti-chart-bar me-2"></i>Metrics
+            </a>
+            
+        </nav>
+    </div>
+    
+    <div class="mb-4">
+        <h4 class="text-muted text-uppercase small mb-2">Storage</h4>
+        <nav class="nav flex-column">
+            
+            <a class="nav-link" href="/en/docs/storage-overview/">
+                <i class="ti ti-database me-2"></i>Storage Overview
+            </a>
+            
+            <a class="nav-link active" href="/en/docs/storage-explorer/">
+                <i class="ti ti-database-search me-2"></i>Storage Explorer
+            </a>
+            
+            <a class="nav-link" href="/en/docs/storage-api/">
+                <i class="ti ti-database-cog me-2"></i>Storage API
+            </a>
+            
+            <a class="nav-link" href="/en/docs/storage-utilization/">
+                <i class="ti ti-database-dollar me-2"></i>Storage Metrics
+            </a>
+            
+        </nav>
+    </div>
+    
+    <div class="mb-4">
+        <h4 class="text-muted text-uppercase small mb-2">Features</h4>
+        <nav class="nav flex-column">
+            
+            <a class="nav-link" href="/en/docs/features-image-optimization/">
+                <i class="ti ti-photo me-2"></i>Image Optimization
+            </a>
+            
+        </nav>
+    </div>
+    
+</div>
+                            
+                        </div>
+                        <div class="col-md-7">
+                            <div class="card card-lg">
+                                <div class="card-body">
+                                    <div id="content-scrollspy">
+                                        <div class="kb-content">
+    <div class="card-title mb-4">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/en/">Home</a></li>
+                <li class="breadcrumb-item active">Storage Explorer</li>
+            </ol>
+        </nav>
+    </div>
+<h1>Storage Explorer</h1>
+<p>The <strong>Storage Explorer</strong> provides a web-based interface for managing objects in your Kontenum Storage bucket. It is designed to feel familiar to users coming from Amazon S3 consoles while remaining tightly integrated with Kontenum CDN.</p>
+<h2>Overview</h2>
+<p>Using Storage Explorer, you can:</p>
+<ul>
+<li>Browse objects and folders (prefixes) in your storage bucket</li>
+<li>Upload files directly from your browser</li>
+<li>Create folders</li>
+<li>Download objects</li>
+<li>Delete files or folders</li>
+<li>View operation results and upload status in real time</li>
+</ul>
+<hr>
+<h2>Object Management Capabilities</h2>
+<p>Using Storage Explorer, you can:</p>
+<ul>
+<li>Browse folders and objects</li>
+<li>Upload new objects</li>
+<li>Download existing objects</li>
+<li>Delete objects (soft delete, subject to retention policy)</li>
+<li>View object metadata such as:
+<ul>
+<li>Object size</li>
+<li>Last modified timestamp</li>
+<li>Storage path / key name</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>⚠️ Deleted objects are retained for <strong>90 days</strong> and still contribute to storage usage during the retention period.</p>
+</blockquote>
+<hr>
+<h2>Versioning Behavior</h2>
+<ul>
+<li>Object versioning is <strong>disabled by default</strong>.</li>
+<li>When versioning is not enabled:
+<ul>
+<li>Uploading a file with the same key <strong>overwrites</strong> the existing object.</li>
+</ul>
+</li>
+<li>If versioning is enabled (by request):
+<ul>
+<li>Multiple versions of the same object key will be retained.</li>
+<li>All versions count toward <strong>active storage usage</strong>.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2>Usage and Billing Visibility</h2>
+<ul>
+<li>Storage Explorer reflects <strong>logical object size</strong>, not prorated billing size.</li>
+<li>Billing calculations are handled separately based on:
+<ul>
+<li>Active Storage</li>
+<li>Deleted Storage</li>
+<li>Daily usage accumulation across the month</li>
+</ul>
+</li>
+</ul>
+<p>For detailed billing calculations, refer to the <strong>Storage Pricing and Usage</strong> documentation.</p>
+<hr>
+<h2>File and Folder Navigation</h2>
+<p><img src="/assets/images/storage-explorer.png" alt="Storage Explorer UI"></p>
+<ul>
+<li>Objects are displayed in a <strong>folder-style hierarchy</strong> based on S3 prefixes.</li>
+<li>Breadcrumb navigation allows quick movement between folders.</li>
+<li>Folders are logical prefixes and may be represented as zero-byte objects ending with <code>/</code>.</li>
+</ul>
+<hr>
+<h2>Upload Files</h2>
+<p><img src="/assets/images/storage-explorer-upload.png" alt="Upload Files"></p>
+<ul>
+<li>Supports <strong>drag-and-drop</strong> and manual file selection.</li>
+<li>Maximum upload size: <strong>500 MB per file</strong>.</li>
+<li>Multiple files can be uploaded in parallel.</li>
+<li>Upload progress and results are displayed per file.</li>
+<li>Filenames are validated to prevent invalid characters and unsafe paths.</li>
+</ul>
+<hr>
+<h2>Create Folders</h2>
+<p><img src="/assets/images/storage-explorer-folders.png" alt="Create Folders"></p>
+<ul>
+<li>Folders can be created directly from the UI.</li>
+<li>Folder names are validated for S3 compatibility.</li>
+<li>Newly created folders can be accessed immediately.</li>
+</ul>
+<hr>
+<h2>Delete Objects</h2>
+<p><img src="/assets/images/storage-explorer-delete.png" alt="Delete Objects"></p>
+<ul>
+<li>Files and folders can be deleted individually or in bulk.</li>
+<li>Deleting a folder removes all objects under the selected prefix.</li>
+<li>A confirmation step is required before deletion.</li>
+<li>Deleted objects are subject to the <strong>90-day deleted object retention policy</strong>.</li>
+</ul>
+<hr>
+<h2>Action Log</h2>
+<p><img src="/assets/images/storage-explorer-log.png" alt="Action Log"></p>
+<ul>
+<li>Displays the result of upload and delete operations.</li>
+<li>Includes success and error messages for transparency.</li>
+<li>Useful for diagnosing partial failures during bulk operations.</li>
+</ul>
+<hr>
+<h2>Security and Access Model</h2>
+<ul>
+<li>Storage Explorer uses <strong>temporary presigned URLs</strong> for uploads and downloads.</li>
+<li>All operations follow the same behavior and permission model as <strong>Amazon S3–compatible APIs</strong>.</li>
+</ul>
+<hr>
+<h2>Best Practices</h2>
+<ul>
+<li>Avoid frequent delete-and-reupload cycles to minimize deleted storage accumulation.</li>
+<li>Use consistent object naming conventions to prevent accidental overwrites.</li>
+<li>For automation or large-scale operations, prefer <strong>S3-compatible APIs</strong> over manual UI actions.</li>
+</ul>
+</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 d-none d-md-block">
+                            <nav class="kb-toc">
+                                <h6 class="text-muted text-uppercase small mb-3">
+                                    On This Page
+                                </h6>
+                                <nav class="nav flex-column" id="toc-nav">
+                                    
+                                    <a class="nav-link toc-link" href="#overview">Overview</a>
+                                    
+                                    <a class="nav-link toc-link" href="#object-management-capabilities">Object Management Capabilities</a>
+                                    
+                                    <a class="nav-link toc-link" href="#versioning-behavior">Versioning Behavior</a>
+                                    
+                                    <a class="nav-link toc-link" href="#usage-and-billing-visibility">Usage and Billing Visibility</a>
+                                    
+                                    <a class="nav-link toc-link" href="#file-and-folder-navigation">File and Folder Navigation</a>
+                                    
+                                    <a class="nav-link toc-link" href="#upload-files">Upload Files</a>
+                                    
+                                    <a class="nav-link toc-link" href="#create-folders">Create Folders</a>
+                                    
+                                    <a class="nav-link toc-link" href="#delete-objects">Delete Objects</a>
+                                    
+                                    <a class="nav-link toc-link" href="#action-log">Action Log</a>
+                                    
+                                    <a class="nav-link toc-link" href="#security-and-access-model">Security and Access Model</a>
+                                    
+                                    <a class="nav-link toc-link" href="#best-practices">Best Practices</a>
+                                    
+                                </nav>
+                            </nav>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://node.kontenum.id/dist/js/vendor.js"></script>
+    <script src="/assets/js/app.js?v=5f386d5c"></script>
+    <script src="/assets/js/search.js?v=5708de1d"></script>
+</body>
+</html>

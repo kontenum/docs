@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="id" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memulai dengan Kontenum CDN | Basis Pengetahuan</title>
+    <meta name="description" content="Dokumentasi Kontenum CDN">
+    <link rel="stylesheet" href="https://node.kontenum.id/dist/css/main.css">
+    <link rel="stylesheet" href="https://node.kontenum.id/dist/css/fonts/inter.css">
+    <link rel="stylesheet" href="/assets/css/custom.css?v=0e711ac5">
+    <link rel="alternate" hreflang="en" href="/en/docs/getting-started/">
+    <link rel="alternate" hreflang="id" href="/id/docs/getting-started/">
+    <link rel="icon" type="image/png" href="https://node.kontenum.id/dist/img/favicon.ico">
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-W6BKZWTJ');</script>
+</head>
+<body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W6BKZWTJ"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <div class="page">
+        <header class="navbar navbar-expand-md navbar-dark d-print-none">
+            <div class="container-xl">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3">
+                    <a href="/id/">
+                        <img src="https://node.kontenum.id/dist/img/logo.PNG" alt="Kontenum" class="navbar-brand-image">
+                    </a>
+                </div>
+                <div class="navbar-nav flex-row order-md-last">
+                    <div class="nav-item dropdown lang-switcher">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                            <i class="ti ti-language ti-light"></i>
+                            <span class="d-none d-md-inline ms-1">Bahasa Indonesia</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <a class="dropdown-item " href="/en/docs/getting-started/">
+                                English
+                            </a>
+                            <a class="dropdown-item active" href="/id/docs/getting-started/">
+                                <i class="ti ti-check me-2"></i>Bahasa Indonesia
+                            </a>
+                        </div>
+                    </div>
+                    <div class="nav-item">
+                        <a href="https://www.kontenum.com" class="nav-link">
+                            <i class="ti ti-home ti-light"></i>
+                            <span class="d-none d-md-inline ms-1">Situs Utama</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="collapse navbar-collapse" id="navbar-menu">
+                    <div class="d-flex flex-column flex-md-row flex-fill align-items-stretch align-items-md-center">
+                        <ul class="navbar-nav">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="/id/">
+                                    <span class="nav-link-icon  d-md-none d-lg-inline-block">
+                                        <i class="ti ti-book icon ti-light"></i>
+                                    </span>
+                                    <span class="nav-link-title">Basis Pengetahuan</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="page-wrapper">
+            <div class="page-body">
+                <div class="container-xl">
+                    <div class="row g-4">
+                        <div class="col-md-3">
+                            
+                                <div class="kb-sidebar">
+    <div class="mb-3 position-relative">
+        <input type="text" class="form-control search-input" placeholder="Cari dokumentasi..." autocomplete="off">
+    </div>
+    
+    
+    <div class="mb-4">
+        <h4 class="text-muted text-uppercase small mb-2">Memulai</h4>
+        <nav class="nav flex-column">
+            
+            <a class="nav-link active" href="/id/docs/getting-started/">
+                <i class="ti ti-rocket me-2"></i>Panduan Cepat
+            </a>
+            
+            <a class="nav-link" href="/id/docs/configuration/">
+                <i class="ti ti-settings me-2"></i>Konfigurasi
+            </a>
+            
+            <a class="nav-link" href="/id/docs/ssl-https-setup/">
+                <i class="ti ti-certificate me-2"></i>Pengaturan SSL &amp; HTTPS
+            </a>
+            
+            <a class="nav-link" href="/id/docs/cache-purge/">
+                <i class="ti ti-recycle me-2"></i>Cache Purge
+            </a>
+            
+            <a class="nav-link" href="/id/docs/metrics/">
+                <i class="ti ti-chart-bar me-2"></i>Metrik
+            </a>
+            
+        </nav>
+    </div>
+    
+    <div class="mb-4">
+        <h4 class="text-muted text-uppercase small mb-2">Storage</h4>
+        <nav class="nav flex-column">
+            
+            <a class="nav-link" href="/id/docs/storage-overview/">
+                <i class="ti ti-database me-2"></i>Apa itu Storage
+            </a>
+            
+            <a class="nav-link" href="/id/docs/storage-explorer/">
+                <i class="ti ti-database-search me-2"></i>Storage Explorer
+            </a>
+            
+            <a class="nav-link" href="/id/docs/storage-api/">
+                <i class="ti ti-database-cog me-2"></i>Storage API
+            </a>
+            
+            <a class="nav-link" href="/id/docs/storage-utilization/">
+                <i class="ti ti-database-dollar me-2"></i>Metrik &amp; Statistik
+            </a>
+            
+        </nav>
+    </div>
+    
+    <div class="mb-4">
+        <h4 class="text-muted text-uppercase small mb-2">Fitur</h4>
+        <nav class="nav flex-column">
+            
+            <a class="nav-link" href="/id/docs/features-image-optimization/">
+                <i class="ti ti-photo me-2"></i>Optimisasi Gambar
+            </a>
+            
+        </nav>
+    </div>
+    
+</div>
+                            
+                        </div>
+                        <div class="col-md-7">
+                            <div class="card card-lg">
+                                <div class="card-body">
+                                    <div id="content-scrollspy">
+                                        <div class="kb-content">
+    <div class="card-title mb-4">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/id/">Beranda</a></li>
+                <li class="breadcrumb-item active">Getting Started</li>
+            </ol>
+        </nav>
+    </div>
+<h1>Memulai dengan Kontenum CDN</h1>
+<div class="alert alert-info d-flex align-items-center" role="alert">
+    <i class="ti ti-info-circle me-2"></i>
+    <div>Panduan ini membantu kamu mulai menggunakan Kontenum dengan cepat, dari request akses sampai deploy site CDN pertama kamu.</div>
+</div>
+<p>Kontenum CDN dirancang untuk mempercepat <em>Delivery Content</em> kamu di seluruh Indonesia dengan konfigurasi minimal.</p>
+<h2>Akses &amp; Pembuatan Akun</h2>
+<p>Saat ini, Kontenum tersedia hanya melalui <strong><em>invitation</em></strong>.
+Langkah untuk memulai:</p>
+<ol>
+<li>Kunjungi <strong><a href="https://www.kontenum.com" target="_blank">www.kontenum.com<i class="ti ti-external-link me-2"></i></a></strong></li>
+<li><strong><em>Request free trial</em></strong> dari halaman utama</li>
+<li>Tim kami akan menghubungi kamu segera</li>
+<li>Setelah disetujui, kami akan memberikan akses ke <strong><a href="https://Console.kontenum.com" target="_blank">Console<i class="ti ti-external-link me-2"></i></a></strong></li>
+</ol>
+<p>Setelah akun kamu siap, kamu bisa langsung mulai membuat <em>CDN Site</em>.</p>
+<hr>
+<h2>Konsep Utama: Apa itu Site?</h2>
+<p>Di Kontenum, <em>Site</em> adalah konfigurasi CDN, mirip dengan <em>CDN zone</em> atau <em>distribution</em> di provider lain.</p>
+<p>Sebuah Site menentukan:</p>
+<ul>
+<li>Sumber Konten (<strong><em>Origin</em></strong>)</li>
+<li>Domain yang akan diakses user (<strong><em>Delivery Domain</em></strong>)</li>
+<li>Cara traffic diambil dan didistribusikan melalui CDN Kontenum</li>
+</ul>
+<p>Setiap Site dikelola secara terpisah melalui menu <strong><em>Sites</em></strong> di <strong><a href="https://Console.kontenum.com" target="_blank">Console<i class="ti ti-external-link me-2"></i></a></strong>.</p>
+<hr>
+<h2>Quick Start: Membuat Site Pertama</h2>
+<p>Kamu bisa membuat <em>Site</em> CDN pertama kamu hanya dalam beberapa menit.</p>
+<p>Melalui langkah-langkah berikut:</p>
+<p><strong><strong><a href="https://Console.kontenum.com" target="_blank">Console<i class="ti ti-external-link me-2"></i></a></strong> → Sites → Create New Site</strong></p>
+<p>Kamu akan melihat <em>form</em> seperti gambar di bawah ini.</p>
+<p><img src="/assets/images/create-site-form.png" alt="Form Pembuatan Site"></p>
+<hr>
+<h2>Field Konfigurasi Site</h2>
+<h3>1. Site Name</h3>
+<p>Nama untuk mengidentifikasi <em>Site</em>.</p>
+<p><strong>Contoh:</strong></p>
+<pre><code>my-website-cdn
+</code></pre>
+<hr>
+<h3>2. Origin Type</h3>
+<p>Sumber asal konten.</p>
+<ul>
+<li><strong>Domain</strong> – Gunakan website atau server yang sudah ada sebagai origin</li>
+<li><strong>Storage</strong> – Gunakan Kontenum Storage sebagai origin (untuk aset statis)</li>
+</ul>
+<p>Untuk sebagian besar pengaturan pertama kali, pilih <strong>Domain</strong>.</p>
+<hr>
+<h3>3. Origin Domain</h3>
+<p>Domain tempat konten kamu saat ini di-<em>host</em>.</p>
+<p><strong>Contoh:</strong></p>
+<pre><code>origin.example.com
+</code></pre>
+<p>Kontenum akan mengambil konten dari <em>origin</em> ini dan menyimpannya di <em>cache</em> di seluruh jaringan CDN kami.</p>
+<hr>
+<h3>4. Origin Path (Opsional)</h3>
+<p>Tentukan sub-<em>path</em> jika hanya sebagian dari origin yang ingin di-<em>deliver</em> melalui CDN.</p>
+<p><strong>Contoh:</strong></p>
+<pre><code>/assets/
+</code></pre>
+<p>Kosongkan jika ingin meng-<em>deliver</em> konten dari <em>root path origin</em>.</p>
+<hr>
+<h3>5. Origin Protocol</h3>
+<p>Pilih protokol yang digunakan untuk menghubungkan ke origin:</p>
+<ul>
+<li><strong>HTTPS</strong> (disarankan)</li>
+<li><strong>HTTP</strong></li>
+</ul>
+<p>Pastikan ini sesuai dengan konfigurasi server <em>origin</em>.</p>
+<hr>
+<h3>6. Delivery Domain</h3>
+<p>Ini adalah <em>domain</em> yang akan diakses oleh <em>end user</em>.</p>
+<p><em>Domain</em> ini harus kamu miliki dan kelola.</p>
+<p><strong>Contoh:</strong></p>
+<pre><code>cdn.example.com
+</code></pre>
+<blockquote>
+<p>⚠️ Pastikan kamu dapat mengonfigurasi <em>DNS record</em> untuk <em>domain</em> ini.</p>
+</blockquote>
+<hr>
+<h2>Deploy the Site</h2>
+<p>Setelah semua <em>field</em> diisi:</p>
+<ol>
+<li>Klik <strong>Create Site</strong></li>
+<li><em>Deployment</em> akan dimulai secara otomatis</li>
+<li>Proses ini biasanya memakan waktu <strong>sekitar 5 menit</strong></li>
+</ol>
+<p>Setelah <em>deployment</em> selesai, <strong>Site CDN pertama kamu sudah aktif</strong> 🎉</p>
+<hr>
+<h2>Selanjutnya</h2>
+<p>Setelah site kamu <em>deployed</em>, kamu bisa:</p>
+<ul>
+<li>Mengatur DNS untuk <em>Delivery Domain</em></li>
+<li>Mengaktifkan <em>HTTPS certificate</em> (<em>certificate</em> milik kamu sendiri atau melalui fitur ACME)</li>
+<li>Memantau <em>traffic</em> dan penggunaan di <strong>Metrics</strong>
+Pelajari dokumentasi lainnya untuk mengoptimalkan penggunaan Kontenum CDN.</li>
+</ul>
+<hr>
+<p>Jika kamu membutuhkan bantuan, jangan ragu untuk menghubungi <a href="mailto:contact@kontenum.com">tim Support</a>.</p>
+</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 d-none d-md-block">
+                            <nav class="kb-toc">
+                                <h6 class="text-muted text-uppercase small mb-3">
+                                    Di Halaman Ini
+                                </h6>
+                                <nav class="nav flex-column" id="toc-nav">
+                                    
+                                    <a class="nav-link toc-link" href="#akses-pembuatan-akun">Akses &amp; Pembuatan Akun</a>
+                                    
+                                    <a class="nav-link toc-link" href="#konsep-utama-apa-itu-site">Konsep Utama: Apa itu Site?</a>
+                                    
+                                    <a class="nav-link toc-link" href="#quick-start-membuat-site-pertama">Quick Start: Membuat Site Pertama</a>
+                                    
+                                    <a class="nav-link toc-link" href="#field-konfigurasi-site">Field Konfigurasi Site</a>
+                                    
+                                    <a class="nav-link toc-link" href="#deploy-the-site">Deploy the Site</a>
+                                    
+                                    <a class="nav-link toc-link" href="#selanjutnya">Selanjutnya</a>
+                                    
+                                </nav>
+                            </nav>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://node.kontenum.id/dist/js/vendor.js"></script>
+    <script src="/assets/js/app.js?v=5f386d5c"></script>
+    <script src="/assets/js/search.js?v=5708de1d"></script>
+</body>
+</html>

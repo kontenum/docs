@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="id" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storage Explorer | Basis Pengetahuan</title>
+    <meta name="description" content="Dokumentasi Kontenum CDN">
+    <link rel="stylesheet" href="https://node.kontenum.id/dist/css/main.css">
+    <link rel="stylesheet" href="https://node.kontenum.id/dist/css/fonts/inter.css">
+    <link rel="stylesheet" href="/assets/css/custom.css?v=0e711ac5">
+    <link rel="alternate" hreflang="en" href="/en/docs/storage-explorer/">
+    <link rel="alternate" hreflang="id" href="/id/docs/storage-explorer/">
+    <link rel="icon" type="image/png" href="https://node.kontenum.id/dist/img/favicon.ico">
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-W6BKZWTJ');</script>
+</head>
+<body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W6BKZWTJ"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <div class="page">
+        <header class="navbar navbar-expand-md navbar-dark d-print-none">
+            <div class="container-xl">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3">
+                    <a href="/id/">
+                        <img src="https://node.kontenum.id/dist/img/logo.PNG" alt="Kontenum" class="navbar-brand-image">
+                    </a>
+                </div>
+                <div class="navbar-nav flex-row order-md-last">
+                    <div class="nav-item dropdown lang-switcher">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                            <i class="ti ti-language ti-light"></i>
+                            <span class="d-none d-md-inline ms-1">Bahasa Indonesia</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <a class="dropdown-item " href="/en/docs/storage-explorer/">
+                                English
+                            </a>
+                            <a class="dropdown-item active" href="/id/docs/storage-explorer/">
+                                <i class="ti ti-check me-2"></i>Bahasa Indonesia
+                            </a>
+                        </div>
+                    </div>
+                    <div class="nav-item">
+                        <a href="https://www.kontenum.com" class="nav-link">
+                            <i class="ti ti-home ti-light"></i>
+                            <span class="d-none d-md-inline ms-1">Situs Utama</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="collapse navbar-collapse" id="navbar-menu">
+                    <div class="d-flex flex-column flex-md-row flex-fill align-items-stretch align-items-md-center">
+                        <ul class="navbar-nav">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="/id/">
+                                    <span class="nav-link-icon  d-md-none d-lg-inline-block">
+                                        <i class="ti ti-book icon ti-light"></i>
+                                    </span>
+                                    <span class="nav-link-title">Basis Pengetahuan</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="page-wrapper">
+            <div class="page-body">
+                <div class="container-xl">
+                    <div class="row g-4">
+                        <div class="col-md-3">
+                            
+                                <div class="kb-sidebar">
+    <div class="mb-3 position-relative">
+        <input type="text" class="form-control search-input" placeholder="Cari dokumentasi..." autocomplete="off">
+    </div>
+    
+    
+    <div class="mb-4">
+        <h4 class="text-muted text-uppercase small mb-2">Memulai</h4>
+        <nav class="nav flex-column">
+            
+            <a class="nav-link" href="/id/docs/getting-started/">
+                <i class="ti ti-rocket me-2"></i>Panduan Cepat
+            </a>
+            
+            <a class="nav-link" href="/id/docs/configuration/">
+                <i class="ti ti-settings me-2"></i>Konfigurasi
+            </a>
+            
+            <a class="nav-link" href="/id/docs/ssl-https-setup/">
+                <i class="ti ti-certificate me-2"></i>Pengaturan SSL &amp; HTTPS
+            </a>
+            
+            <a class="nav-link" href="/id/docs/cache-purge/">
+                <i class="ti ti-recycle me-2"></i>Cache Purge
+            </a>
+            
+            <a class="nav-link" href="/id/docs/metrics/">
+                <i class="ti ti-chart-bar me-2"></i>Metrik
+            </a>
+            
+        </nav>
+    </div>
+    
+    <div class="mb-4">
+        <h4 class="text-muted text-uppercase small mb-2">Storage</h4>
+        <nav class="nav flex-column">
+            
+            <a class="nav-link" href="/id/docs/storage-overview/">
+                <i class="ti ti-database me-2"></i>Apa itu Storage
+            </a>
+            
+            <a class="nav-link active" href="/id/docs/storage-explorer/">
+                <i class="ti ti-database-search me-2"></i>Storage Explorer
+            </a>
+            
+            <a class="nav-link" href="/id/docs/storage-api/">
+                <i class="ti ti-database-cog me-2"></i>Storage API
+            </a>
+            
+            <a class="nav-link" href="/id/docs/storage-utilization/">
+                <i class="ti ti-database-dollar me-2"></i>Metrik &amp; Statistik
+            </a>
+            
+        </nav>
+    </div>
+    
+    <div class="mb-4">
+        <h4 class="text-muted text-uppercase small mb-2">Fitur</h4>
+        <nav class="nav flex-column">
+            
+            <a class="nav-link" href="/id/docs/features-image-optimization/">
+                <i class="ti ti-photo me-2"></i>Optimisasi Gambar
+            </a>
+            
+        </nav>
+    </div>
+    
+</div>
+                            
+                        </div>
+                        <div class="col-md-7">
+                            <div class="card card-lg">
+                                <div class="card-body">
+                                    <div id="content-scrollspy">
+                                        <div class="kb-content">
+    <div class="card-title mb-4">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/id/">Beranda</a></li>
+                <li class="breadcrumb-item active">Storage Explorer</li>
+            </ol>
+        </nav>
+    </div>
+<h1>Storage Explorer</h1>
+<p><strong>Storage Explorer</strong> menyediakan antarmuka berbasis web untuk mengelola objek di bucket Kontenum Storage Anda. Fitur ini dirancang agar terasa familiar bagi pengguna Amazon S3 Console, sekaligus terintegrasi erat dengan Kontenum CDN.</p>
+<h2>Ringkasan</h2>
+<p>Dengan Storage Explorer, Anda dapat:</p>
+<ul>
+<li>Menelusuri objek dan folder (prefix) di bucket storage</li>
+<li>Mengunggah file langsung dari browser</li>
+<li>Membuat folder</li>
+<li>Mengunduh objek</li>
+<li>Menghapus file atau folder</li>
+<li>Melihat hasil operasi dan status upload secara real-time</li>
+</ul>
+<hr>
+<h2>Kemampuan Manajemen Objek</h2>
+<p>Menggunakan Storage Explorer, Anda dapat:</p>
+<ul>
+<li>Menelusuri folder dan objek</li>
+<li>Mengunggah objek baru</li>
+<li>Mengunduh objek yang sudah ada</li>
+<li>Menghapus objek (soft delete, mengikuti kebijakan retensi)</li>
+<li>Melihat metadata objek, seperti:
+<ul>
+<li>Ukuran objek</li>
+<li>Waktu terakhir dimodifikasi</li>
+<li>Path storage / nama key</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>⚠️ Objek yang dihapus akan disimpan selama <strong>90 hari</strong> dan tetap dihitung sebagai penggunaan storage selama masa retensi tersebut.</p>
+</blockquote>
+<hr>
+<h2>Versioning</h2>
+<ul>
+<li>Versioning objek <strong>dinonaktifkan secara default</strong>.</li>
+<li>Jika versioning tidak diaktifkan:
+<ul>
+<li>Mengunggah file dengan key yang sama akan <strong>menimpa</strong> objek yang sudah ada.</li>
+</ul>
+</li>
+<li>Jika versioning diaktifkan (berdasarkan permintaan):
+<ul>
+<li>Beberapa versi dari key objek yang sama akan disimpan.</li>
+<li>Semua versi dihitung sebagai <strong>penggunaan storage aktif</strong>.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2>Visibilitas Penggunaan dan Penagihan</h2>
+<ul>
+<li>Storage Explorer menampilkan <strong>ukuran objek secara logis</strong>, bukan ukuran billing yang diprorata.</li>
+<li>Perhitungan penagihan dilakukan secara terpisah berdasarkan:
+<ul>
+<li>Storage Aktif</li>
+<li>Storage Terhapus</li>
+<li>Akumulasi penggunaan harian selama satu bulan</li>
+</ul>
+</li>
+</ul>
+<p>Untuk detail perhitungan penagihan, silakan lihat dokumentasi <strong>Utilisasi Storage</strong>.</p>
+<hr>
+<h2>Navigasi File dan Folder</h2>
+<p><img src="/assets/images/storage-explorer.png" alt="Storage Explorer UI"></p>
+<ul>
+<li>Objek ditampilkan dalam <strong>hierarki bergaya folder</strong> berdasarkan prefix S3.</li>
+<li>Navigasi breadcrumb memungkinkan perpindahan cepat antar folder.</li>
+<li>Folder bersifat fisik (prefix) dan dapat direpresentasikan sebagai objek berukuran nol byte yang diakhiri dengan <code>/</code>.</li>
+</ul>
+<hr>
+<h2>Unggah Berkas</h2>
+<p><img src="/assets/images/storage-explorer-upload.png" alt="Unggah Berkas"></p>
+<ul>
+<li>Mendukung <strong>drag-and-drop</strong> dan pemilihan file manual.</li>
+<li>Ukuran maksimum upload: <strong>500 MB per file</strong>.</li>
+<li>Beberapa file dapat diunggah secara paralel.</li>
+<li>Progres dan hasil upload ditampilkan untuk setiap file.</li>
+<li>Nama file divalidasi untuk mencegah karakter tidak valid dan path yang tidak aman.</li>
+</ul>
+<hr>
+<h2>Buat Folder</h2>
+<p><img src="/assets/images/storage-explorer-folders.png" alt="Buat Folder"></p>
+<ul>
+<li>Folder dapat dibuat langsung dari UI.</li>
+<li>Nama folder divalidasi agar kompatibel dengan S3.</li>
+<li>Folder yang baru dibuat dapat langsung diakses.</li>
+</ul>
+<hr>
+<h2>Menghapus Objek</h2>
+<p><img src="/assets/images/storage-explorer-delete.png" alt="Menghapus Objek"></p>
+<ul>
+<li>File dan folder dapat dihapus satu per satu atau secara massal.</li>
+<li>Menghapus folder akan menghapus semua objek di bawah  prefix yang dipilih.</li>
+<li>Diperlukan langkah konfirmasi sebelum penghapusan.</li>
+<li>Objek yang dihapus mengikuti <strong>kebijakan retensi objek terhapus selama 90 hari</strong>.</li>
+</ul>
+<hr>
+<h2>Log Aksi</h2>
+<p><img src="/assets/images/storage-explorer-log.png" alt="Log Aksi"></p>
+<ul>
+<li>Menampilkan hasil operasi unggah dan hapus.</li>
+<li>Menyertakan pesan sukses dan kesalahan untuk transparansi.</li>
+<li>Berguna untuk mendiagnosis kegagalan parsial selama operasi massal.</li>
+</ul>
+<hr>
+<h2>Model Keamanan dan Akses</h2>
+<ul>
+<li>Storage Explorer menggunakan <strong>temporary presigned URLs</strong> untuk unggah dan unduh.</li>
+<li>Semua operasi mengikuti perilaku dan model izin yang sama seperti <strong>Amazon S3–compatible APIs</strong>.</li>
+</ul>
+<hr>
+<h2>Praktik Terbaik</h2>
+<ul>
+<li>Hindari siklus hapus dan unggah ulang yang sering untuk meminimalkan akumulasi storage terhapus.</li>
+<li>Gunakan konvensi penamaan objek yang konsisten untuk mencegah penimpaan yang tidak disengaja.</li>
+<li>Untuk otomatisasi atau operasi skala besar, lebih baik menggunakan <strong>S3-compatible APIs</strong> daripada tindakan manual melalui UI.</li>
+</ul>
+</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 d-none d-md-block">
+                            <nav class="kb-toc">
+                                <h6 class="text-muted text-uppercase small mb-3">
+                                    Di Halaman Ini
+                                </h6>
+                                <nav class="nav flex-column" id="toc-nav">
+                                    
+                                    <a class="nav-link toc-link" href="#ringkasan">Ringkasan</a>
+                                    
+                                    <a class="nav-link toc-link" href="#kemampuan-manajemen-objek">Kemampuan Manajemen Objek</a>
+                                    
+                                    <a class="nav-link toc-link" href="#versioning">Versioning</a>
+                                    
+                                    <a class="nav-link toc-link" href="#visibilitas-penggunaan-dan-penagihan">Visibilitas Penggunaan dan Penagihan</a>
+                                    
+                                    <a class="nav-link toc-link" href="#navigasi-file-dan-folder">Navigasi File dan Folder</a>
+                                    
+                                    <a class="nav-link toc-link" href="#unggah-berkas">Unggah Berkas</a>
+                                    
+                                    <a class="nav-link toc-link" href="#buat-folder">Buat Folder</a>
+                                    
+                                    <a class="nav-link toc-link" href="#menghapus-objek">Menghapus Objek</a>
+                                    
+                                    <a class="nav-link toc-link" href="#log-aksi">Log Aksi</a>
+                                    
+                                    <a class="nav-link toc-link" href="#model-keamanan-dan-akses">Model Keamanan dan Akses</a>
+                                    
+                                    <a class="nav-link toc-link" href="#praktik-terbaik">Praktik Terbaik</a>
+                                    
+                                </nav>
+                            </nav>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://node.kontenum.id/dist/js/vendor.js"></script>
+    <script src="/assets/js/app.js?v=5f386d5c"></script>
+    <script src="/assets/js/search.js?v=5708de1d"></script>
+</body>
+</html>

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="id" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storage API | Basis Pengetahuan</title>
+    <meta name="description" content="Dokumentasi Kontenum CDN">
+    <link rel="stylesheet" href="https://node.kontenum.id/dist/css/main.css">
+    <link rel="stylesheet" href="https://node.kontenum.id/dist/css/fonts/inter.css">
+    <link rel="stylesheet" href="/assets/css/custom.css?v=0e711ac5">
+    <link rel="alternate" hreflang="en" href="/en/docs/storage-api/">
+    <link rel="alternate" hreflang="id" href="/id/docs/storage-api/">
+    <link rel="icon" type="image/png" href="https://node.kontenum.id/dist/img/favicon.ico">
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-W6BKZWTJ');</script>
+</head>
+<body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W6BKZWTJ"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <div class="page">
+        <header class="navbar navbar-expand-md navbar-dark d-print-none">
+            <div class="container-xl">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3">
+                    <a href="/id/">
+                        <img src="https://node.kontenum.id/dist/img/logo.PNG" alt="Kontenum" class="navbar-brand-image">
+                    </a>
+                </div>
+                <div class="navbar-nav flex-row order-md-last">
+                    <div class="nav-item dropdown lang-switcher">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                            <i class="ti ti-language ti-light"></i>
+                            <span class="d-none d-md-inline ms-1">Bahasa Indonesia</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <a class="dropdown-item " href="/en/docs/storage-api/">
+                                English
+                            </a>
+                            <a class="dropdown-item active" href="/id/docs/storage-api/">
+                                <i class="ti ti-check me-2"></i>Bahasa Indonesia
+                            </a>
+                        </div>
+                    </div>
+                    <div class="nav-item">
+                        <a href="https://www.kontenum.com" class="nav-link">
+                            <i class="ti ti-home ti-light"></i>
+                            <span class="d-none d-md-inline ms-1">Situs Utama</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="collapse navbar-collapse" id="navbar-menu">
+                    <div class="d-flex flex-column flex-md-row flex-fill align-items-stretch align-items-md-center">
+                        <ul class="navbar-nav">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="/id/">
+                                    <span class="nav-link-icon  d-md-none d-lg-inline-block">
+                                        <i class="ti ti-book icon ti-light"></i>
+                                    </span>
+                                    <span class="nav-link-title">Basis Pengetahuan</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="page-wrapper">
+            <div class="page-body">
+                <div class="container-xl">
+                    <div class="row g-4">
+                        <div class="col-md-3">
+                            
+                                <div class="kb-sidebar">
+    <div class="mb-3 position-relative">
+        <input type="text" class="form-control search-input" placeholder="Cari dokumentasi..." autocomplete="off">
+    </div>
+    
+    
+    <div class="mb-4">
+        <h4 class="text-muted text-uppercase small mb-2">Memulai</h4>
+        <nav class="nav flex-column">
+            
+            <a class="nav-link" href="/id/docs/getting-started/">
+                <i class="ti ti-rocket me-2"></i>Panduan Cepat
+            </a>
+            
+            <a class="nav-link" href="/id/docs/configuration/">
+                <i class="ti ti-settings me-2"></i>Konfigurasi
+            </a>
+            
+            <a class="nav-link" href="/id/docs/ssl-https-setup/">
+                <i class="ti ti-certificate me-2"></i>Pengaturan SSL &amp; HTTPS
+            </a>
+            
+            <a class="nav-link" href="/id/docs/cache-purge/">
+                <i class="ti ti-recycle me-2"></i>Cache Purge
+            </a>
+            
+            <a class="nav-link" href="/id/docs/metrics/">
+                <i class="ti ti-chart-bar me-2"></i>Metrik
+            </a>
+            
+        </nav>
+    </div>
+    
+    <div class="mb-4">
+        <h4 class="text-muted text-uppercase small mb-2">Storage</h4>
+        <nav class="nav flex-column">
+            
+            <a class="nav-link" href="/id/docs/storage-overview/">
+                <i class="ti ti-database me-2"></i>Apa itu Storage
+            </a>
+            
+            <a class="nav-link" href="/id/docs/storage-explorer/">
+                <i class="ti ti-database-search me-2"></i>Storage Explorer
+            </a>
+            
+            <a class="nav-link active" href="/id/docs/storage-api/">
+                <i class="ti ti-database-cog me-2"></i>Storage API
+            </a>
+            
+            <a class="nav-link" href="/id/docs/storage-utilization/">
+                <i class="ti ti-database-dollar me-2"></i>Metrik &amp; Statistik
+            </a>
+            
+        </nav>
+    </div>
+    
+    <div class="mb-4">
+        <h4 class="text-muted text-uppercase small mb-2">Fitur</h4>
+        <nav class="nav flex-column">
+            
+            <a class="nav-link" href="/id/docs/features-image-optimization/">
+                <i class="ti ti-photo me-2"></i>Optimisasi Gambar
+            </a>
+            
+        </nav>
+    </div>
+    
+</div>
+                            
+                        </div>
+                        <div class="col-md-7">
+                            <div class="card card-lg">
+                                <div class="card-body">
+                                    <div id="content-scrollspy">
+                                        <div class="kb-content">
+    <div class="card-title mb-4">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/id/">Beranda</a></li>
+                <li class="breadcrumb-item active">Storage API</li>
+            </ol>
+        </nav>
+    </div>
+<h1>Kontenum Storage API</h1>
+<h2>Ringkasan</h2>
+<p>Layanan object storage Kontenum didesain agar <strong>100% kompatibel dengan AWS S3</strong>. Ini berarti aplikasi, SDK, atau perangkat <em>gateway</em> apa pun yang kompatibel dengan AWS S3 dapat digunakan secara <em>seamless</em> dengan Kontenum.</p>
+<p>Dalam beberapa kasus, Kontenum menyediakan fungsionalitas tambahan atau menerapkan <em>rule</em> tertentu yang berbeda dibandingkan AWS S3. Dokumen ini menjelaskan perbedaan tersebut dan cara menggunakan Kontenum S3 API secara efektif.</p>
+<p>Karena kompatibilitas ini, <strong>dokumentasi AWS S3 harus diperlakukan sebagai referensi pelengkap</strong> saat berkomunikasi dengan Kontenum Storage API.</p>
+<hr>
+<h2>Spesifikasi Referensi</h2>
+<p>Kapabilitas AWS S3 yang dirujuk dalam panduan ini didasarkan pada:</p>
+<ul>
+<li><strong>Versi API:</strong> 2006-03-01</li>
+<li><strong>Referensi AWS:</strong> <a href="http://docs.aws.amazon.com/AmazonS3/latest/API/s3-api.pdf">Amazon Simple Storage Service API Reference</a></li>
+</ul>
+<p>Sepanjang panduan ini:</p>
+<ul>
+<li><strong>&quot;Kontenum&quot;</strong> merujuk pada fungsionalitas Kontenum S3</li>
+<li><strong>&quot;AWS S3&quot;</strong> merujuk pada perilaku asli API AWS S3</li>
+</ul>
+<hr>
+<h2>Keterbatasan API</h2>
+<p>Perlu diperhatikan bahwa Kontenum S3 API memiliki beberapa keterbatasan dibandingkan AWS S3. Keterbatasan ini merupakan pilihan desain yang disengaja dan disesuaikan dengan kebutuhan penggunaan Kontenum sebagai <strong>CDN origin</strong>.</p>
+<hr>
+<h2>Access Keys dan Autentikasi</h2>
+<h3>Membuat Access Keys</h3>
+<p>Anda dapat membuat, melihat, melakukan rotasi, dan menghapus access key melalui <strong>Kontenum Console → Storage Access Keys</strong>.</p>
+<blockquote>
+<p>📌 <strong>Catatan:</strong> Setiap akun dapat memiliki maksimal <strong>2 access key aktif</strong> pada satu waktu.</p>
+</blockquote>
+<p><img src="/assets/images/storage-access-keys.png" alt="Storage Access Keys"></p>
+<blockquote>
+<p>Tips:</p>
+<ul>
+<li>Simpan <strong>Secret Access Key</strong> dengan aman, karena hanya ditampilkan <strong>satu kali</strong> saat pembuatan key.</li>
+<li>Lakukan rotasi key secara berkala untuk meningkatkan keamanan.</li>
+<li>Hapus key yang tidak digunakan untuk meminimalkan risiko keamanan.</li>
+<li>Jika ingin melakukan rotasi key, buat key baru terlebih dahulu, perbarui aplikasi agar menggunakan key baru tersebut, nonaktifkan key lama, pantau aplikasi Anda, lalu hapus key lama.</li>
+</ul>
+</blockquote>
+<hr>
+<h3>Mekanisme Autentikasi</h3>
+<p>Semua permintaan API diautentikasi melalui <strong>Authorization HTTP header</strong>.</p>
+<p>Format:</p>
+<pre><code>Authorization: &lt;ACCESS_KEY&gt;:&lt;SECRET_KEY&gt;
+</code></pre>
+<p>Baik <strong>Access Key</strong> maupun <strong>Secret Key</strong> diperlukan untuk menandatangani setiap <em>request</em>.</p>
+<hr>
+<h3>Praktik Keamanan Terbaik</h3>
+<ul>
+<li>Jangan pernah membagikan <strong>Secret Access Key</strong> kepada siapa pun</li>
+<li>Lakukan rotasi access key secara berkala</li>
+<li>Simpan key secara aman di konfigurasi sisi server</li>
+<li><strong>Jangan</strong> menyematkan key di JavaScript sisi browser atau <em>environment</em> tidak tepercaya lainnya</li>
+</ul>
+<hr>
+<h2>Protokol</h2>
+<p>Kontenum S3 mendukung:</p>
+<ul>
+<li><strong>HTTP</strong></li>
+<li><strong>HTTPS</strong> (direkomendasikan)</li>
+</ul>
+<p>Pilih protokol yang paling sesuai dengan kebutuhan keamanan dan performa Anda.</p>
+<hr>
+<h2>Perilaku Kontrol Akses</h2>
+<h3>Pembatasan Akses Baca</h3>
+<p><code>GetObject</code> (akses BACA) <strong>dinonaktifkan</strong> melalui API S3.</p>
+<p>Ini merupakan desain yang disengaja, karena Kontenum Storage dioptimalkan untuk <strong>use case CDN sebagai origin</strong>.</p>
+<p>Anda masih dapat:</p>
+<ul>
+<li>Mengunduh objek menggunakan fitur <strong>Storage Explorer</strong> di Kontenum Console</li>
+</ul>
+<hr>
+<h2>Penentuan Host</h2>
+<p>Kontenum mendukung kedua gaya request AWS S3:</p>
+<ul>
+<li><strong>Path-style requests</strong></li>
+<li><strong>Virtual-hosted–style requests</strong></li>
+</ul>
+<p>Example host:</p>
+<pre><code>s3.kontenum.com
+</code></pre>
+<h3>Rekomendasi Style</h3>
+<p>Kontenum <strong>merekomendasikan _path-style _requests</strong> untuk fleksibilitas maksimal:</p>
+<pre><code>https://s3.kontenum.com/my-bucket/my-object
+</code></pre>
+<p><em>Path-style</em> menghindari limitasi domain dan sertifikat yang terkait dengan penamaan bucket.</p>
+<hr>
+<h2>Respon Error</h2>
+<p>Sebisa mungkin, Kontenum mengembalikan <strong>respons error yang identik dengan AWS S3</strong>, sehingga tetap kompatibel dengan <em>tooling</em> dan SDK AWS S3 yang sudah ada.</p>
+<hr>
+<h2>Request Signing dan Autentikasi</h2>
+<p>Kontenum mendukung mekanisme <em>request signing</em> yang sama seperti AWS S3:</p>
+<h3>Versi Signature yang Didukung</h3>
+<ul>
+<li><strong>Signature Version 2</strong></li>
+<li><strong>Signature Version 4</strong></li>
+</ul>
+<p>Baik <em>request signing</em> berbasis header maupun parameter query didukung.</p>
+<hr>
+<h3>Signature Version 4</h3>
+<ul>
+<li>Menawarkan keamanan yang lebih kuat</li>
+<li>Memerlukan hashing SHA256</li>
+<li>Biaya komputasi sedikit lebih tinggi</li>
+<li>Semua <em>region</em> didukung</li>
+<li>Default AWS region: <code>us-east-1</code></li>
+</ul>
+<p>Direkomendasikan untuk workload yang sensitif terhadap keamanan.</p>
+<hr>
+<h3>Signature Version 2</h3>
+<ul>
+<li>Proses signing dan verifikasi lebih cepat</li>
+<li>Cocok untuk aplikasi yang sangat sensitif terhadap performa</li>
+<li>Integritas data dapat diverifikasi menggunakan <strong>ETag (MD5 hash)</strong> yang dikembalikan</li>
+</ul>
+<h4>Parameter Subresource Tambahan</h4>
+<p>Kontenum memperluas Signature Version 2 dengan subresource query tambahan:</p>
+<ul>
+<li><code>append</code></li>
+<li><code>compose</code></li>
+<li><code>force_delete=true</code></li>
+</ul>
+<p>Parameter ini berlaku untuk:</p>
+<ul>
+<li><code>PutObject</code></li>
+<li><code>DeleteBucket</code></li>
+</ul>
+<p>Saat menggunakan Signature Version 2, subresource tersebut <strong>harus disertakan dalam perhitungan signature</strong>.</p>
+<hr>
+<h3>Operasi yang Tidak Didukung</h3>
+<p>Kontenum tidak mendukung:</p>
+<ul>
+<li>Browser-based uploads</li>
+<li>HTML form–based S3 uploads</li>
+</ul>
+<p>Operasi ini ditujukan untuk alur kerja halaman web, yang saat ini tidak didukung oleh Kontenum.</p>
+<hr>
+<h2>Kesimpulan</h2>
+<p>Kontenum S3 sepenuhnya kompatibel dengan AWS S3 sekaligus dioptimalkan untuk <em>workload</em> <strong>CDN sebagai origin</strong>. Aplikasi AWS S3 yang sudah ada dapat digunakan dengan perubahan minimal atau bahkan tanpa perubahan, dengan tetap memperhatikan pembatasan akses dan perilaku penandatanganan (<em>signing</em>) khusus milik Kontenum.</p>
+<p>Untuk pola penggunaan S3 secara umum, selalu jadikan <strong>dokumentasi resmi AWS S3</strong> sebagai referensi pendamping bersama panduan ini.</p>
+</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 d-none d-md-block">
+                            <nav class="kb-toc">
+                                <h6 class="text-muted text-uppercase small mb-3">
+                                    Di Halaman Ini
+                                </h6>
+                                <nav class="nav flex-column" id="toc-nav">
+                                    
+                                    <a class="nav-link toc-link" href="#ringkasan">Ringkasan</a>
+                                    
+                                    <a class="nav-link toc-link" href="#spesifikasi-referensi">Spesifikasi Referensi</a>
+                                    
+                                    <a class="nav-link toc-link" href="#keterbatasan-api">Keterbatasan API</a>
+                                    
+                                    <a class="nav-link toc-link" href="#access-keys-dan-autentikasi">Access Keys dan Autentikasi</a>
+                                    
+                                    <a class="nav-link toc-link" href="#protokol">Protokol</a>
+                                    
+                                    <a class="nav-link toc-link" href="#perilaku-kontrol-akses">Perilaku Kontrol Akses</a>
+                                    
+                                    <a class="nav-link toc-link" href="#penentuan-host">Penentuan Host</a>
+                                    
+                                    <a class="nav-link toc-link" href="#respon-error">Respon Error</a>
+                                    
+                                    <a class="nav-link toc-link" href="#request-signing-dan-autentikasi">Request Signing dan Autentikasi</a>
+                                    
+                                    <a class="nav-link toc-link" href="#kesimpulan">Kesimpulan</a>
+                                    
+                                </nav>
+                            </nav>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://node.kontenum.id/dist/js/vendor.js"></script>
+    <script src="/assets/js/app.js?v=5f386d5c"></script>
+    <script src="/assets/js/search.js?v=5708de1d"></script>
+</body>
+</html>
