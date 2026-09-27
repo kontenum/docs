@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSL &amp; HTTPS Setup | Knowledge Base</title>
+    <meta name="description" content="Kontenum CDN Documentation">
+    <link rel="stylesheet" href="https://node.kontenum.id/dist/css/main.css">
+    <link rel="stylesheet" href="https://node.kontenum.id/dist/css/fonts/inter.css">
+    <link rel="stylesheet" href="/assets/css/custom.css?v=0e711ac5">
+    <link rel="alternate" hreflang="en" href="/en/docs/ssl-https-setup/">
+    <link rel="alternate" hreflang="id" href="/id/docs/ssl-https-setup/">
+    <link rel="shortcut icon" href="https://node.kontenum.id/dist/img/favicon.ico?v=20260402">
+    <link rel="icon" type="image/png" href="https://node.kontenum.id/dist/img/favicon-96x96.png?v=20260402" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="https://node.kontenum.id/dist/img/favicon.svg?v=20260402">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://node.kontenum.id/dist/img/apple-touch-icon.png?v=20260402">
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-W6BKZWTJ');</script>
+</head>
+<body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W6BKZWTJ"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <div class="page">
+        <header class="navbar navbar-expand-md navbar-dark d-print-none">
+            <div class="container-xl">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3">
+                    <a href="/en/">
+                        <img src="https://node.kontenum.id/dist/img/logo.PNG" alt="Kontenum" class="navbar-brand-image">
+                    </a>
+                </div>
+                <div class="navbar-nav flex-row order-md-last">
+                    <div class="nav-item dropdown lang-switcher">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                            <i class="ti ti-language ti-light"></i>
+                            <span class="d-none d-md-inline ms-1">English</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <a class="dropdown-item active" href="/en/docs/ssl-https-setup/">
+                                <i class="ti ti-check me-2"></i>English
+                            </a>
+                            <a class="dropdown-item " href="/id/docs/ssl-https-setup/">
+                                Bahasa Indonesia
+                            </a>
+                        </div>
+                    </div>
+                    <div class="nav-item">
+                        <a href="https://www.kontenum.com" class="nav-link">
+                            <i class="ti ti-home ti-light"></i>
+                            <span class="d-none d-md-inline ms-1">Main Site</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="collapse navbar-collapse" id="navbar-menu">
+                    <div class="d-flex flex-column flex-md-row flex-fill align-items-stretch align-items-md-center">
+                        <ul class="navbar-nav">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="/en/">
+                                    <span class="nav-link-icon  d-md-none d-lg-inline-block">
+                                        <i class="ti ti-book icon ti-light"></i>
+                                    </span>
+                                    <span class="nav-link-title">Knowledge Base</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="page-wrapper">
+            <div class="page-body">
+                <div class="container-xl">
+                    <div class="row g-4">
+                        <div class="col-md-3">
+                            
+                                <div class="kb-sidebar">
+    <div class="mb-3 position-relative">
+        <input type="text" class="form-control search-input" placeholder="Search docs..." autocomplete="off">
+    </div>
+    
+    
+    <div class="mb-4">
+        <h4 class="text-muted text-uppercase small mb-2">Getting Started</h4>
+        <nav class="nav flex-column">
+            
+            <a class="nav-link" href="/en/docs/getting-started/">
+                <i class="ti ti-rocket me-2"></i>Quick Start
+            </a>
+            
+            <a class="nav-link" href="/en/docs/configuration/">
+                <i class="ti ti-settings me-2"></i>Configuration
+            </a>
+            
+            <a class="nav-link active" href="/en/docs/ssl-https-setup/">
+                <i class="ti ti-certificate me-2"></i>SSL &amp; HTTPS Setup
+            </a>
+            
+            <a class="nav-link" href="/en/docs/cache-purge/">
+                <i class="ti ti-recycle me-2"></i>Cache Purge
+            </a>
+            
+            <a class="nav-link" href="/en/docs/metrics/">
+                <i class="ti ti-chart-bar me-2"></i>Metrics
+            </a>
+            
+        </nav>
+    </div>
+    
+    <div class="mb-4">
+        <h4 class="text-muted text-uppercase small mb-2">Storage</h4>
+        <nav class="nav flex-column">
+            
+            <a class="nav-link" href="/en/docs/storage-overview/">
+                <i class="ti ti-database me-2"></i>Storage Overview
+            </a>
+            
+            <a class="nav-link" href="/en/docs/storage-explorer/">
+                <i class="ti ti-database-search me-2"></i>Storage Explorer
+            </a>
+            
+            <a class="nav-link" href="/en/docs/storage-api/">
+                <i class="ti ti-database-cog me-2"></i>Storage API
+            </a>
+            
+            <a class="nav-link" href="/en/docs/storage-utilization/">
+                <i class="ti ti-database-dollar me-2"></i>Storage Metrics
+            </a>
+            
+        </nav>
+    </div>
+    
+    <div class="mb-4">
+        <h4 class="text-muted text-uppercase small mb-2">Features</h4>
+        <nav class="nav flex-column">
+            
+            <a class="nav-link" href="/en/docs/features-image-optimization/">
+                <i class="ti ti-photo me-2"></i>Image Optimization
+            </a>
+            
+        </nav>
+    </div>
+    
+</div>
+                            
+                        </div>
+                        <div class="col-md-7">
+                            <div class="card card-lg">
+                                <div class="card-body">
+                                    <div id="content-scrollspy">
+                                        <div class="kb-content">
+    <div class="card-title mb-4">
+      <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="/en/">Home</a></li>
+              <li class="breadcrumb-item active">SSL & HTTPS Setup</li>
+          </ol>
+      </nav>
+    </div>
+<h1>SSL &amp; HTTPS Setup</h1>
+<div class="alert alert-info d-flex align-items-center" role="alert">
+    <i class="ti ti-info-circle me-2"></i>
+    <div>This guide explains how to secure your delivery domains on <strong>Kontenum CDN</strong> using SSL/TLS certificates. You can either upload your own certificate or enable automatic HTTPS using Let’s Encrypt (ACME).</div>
+</div>
+<hr>
+<h2>Overview</h2>
+<p>Kontenum supports two ways to enable HTTPS:</p>
+<ol>
+<li>
+<p><strong>Manual Certificate Upload</strong></p>
+<p>Upload an existing SSL certificate issued by any trusted Certificate Authority.</p>
+</li>
+<li>
+<p><strong>Automatic HTTPS (ACME / Let’s Encrypt)</strong></p>
+<p>Let Kontenum automatically issue and renew certificates for your delivery domain.</p>
+</li>
+</ol>
+<p>Both methods result in certificates being managed centrally under <strong>Certificate Management</strong>.</p>
+<hr>
+<h2>Uploading an SSL Certificate (Manual)</h2>
+<p>Navigate to:</p>
+<p><strong>Certificates → Certificate Management → Upload Certificate</strong></p>
+<p><img src="/assets/images/certificate-form.png" alt="Upload Certificate Form"></p>
+<h3>Required Fields</h3>
+<p>You will see three input fields:</p>
+<ul>
+<li>
+<p><strong>Certificate</strong> <em>(required)</em>
+The public certificate file (usually <code>.crt</code> or <code>.pem</code>).</p>
+</li>
+<li>
+<p><strong>Private Key</strong> <em>(required)</em>
+The private key that matches the certificate.</p>
+</li>
+<li>
+<p><strong>CA Bundle</strong> <em>(optional but strongly recommended)</em>
+The intermediate certificate chain provided by your Certificate Authority.</p>
+</li>
+</ul>
+<h3>Why CA Bundle Is Important</h3>
+<p>Although Kontenum automatically validates certificates against public root CAs, uploading the <strong>full CA bundle</strong> is highly recommended because:</p>
+<ul>
+<li>Some operating systems or browsers may have <strong>missing or outdated root CAs</strong></li>
+<li>Incomplete chains may cause browsers to show <strong>“Not Secure”</strong> warnings</li>
+<li>Enterprise environments often rely on explicit intermediate chains</li>
+</ul>
+<blockquote>
+<p>Best practice: Always upload the full certificate chain (certificate + intermediates).</p>
+</blockquote>
+<p>After uploading, click <strong>Upload</strong>. The certificate will appear in the certificate list.</p>
+<hr>
+<h2>Certificate Management &amp; Status</h2>
+<p><img src="/assets/images/certificate-management.png" alt="Certificate Management">
+After uploading (or selecting an existing certificate), you will see detailed certificate information:</p>
+<ul>
+<li><strong>Common Name (CN)</strong></li>
+<li><strong>Subject Alternative Names (SANs)</strong></li>
+<li><strong>Issuer</strong> (e.g. Let’s Encrypt)</li>
+<li><strong>Expiration date</strong></li>
+<li><strong>Trust status</strong> (validated against public CAs)</li>
+<li><strong>Fingerprint</strong></li>
+</ul>
+<p>You can also:</p>
+<ul>
+<li>Assign the certificate to one or more hostnames</li>
+<li>Mark a certificate as <strong>Default</strong> for eligible domains</li>
+<li>Replace or re-upload certificates before expiration</li>
+</ul>
+<hr>
+<h2>Certificate Expiration Reminder</h2>
+<p>Kontenum automatically monitors certificate expiration and sends reminder emails at:</p>
+<ul>
+<li><strong>30 days before expiration</strong></li>
+<li><strong>14 days before expiration</strong></li>
+<li><strong>7 days before expiration</strong></li>
+<li><strong>1 day before expiration</strong></li>
+</ul>
+<p>These notifications are sent to the account email to help you avoid service disruption.</p>
+<hr>
+<h2>Automatic HTTPS with DNS-01</h2>
+<p>Kontenum uses <strong>Let’s Encrypt</strong> to issue and renew free SSL certificates. From <strong>28 September 2026</strong>, new Free SSL activations use <strong>DNS-01 validation</strong>, including when you enable it on an older site.</p>
+<p>DNS-01 checks a DNS record instead of requesting a page through your site. Your site's ACL and georestriction rules therefore do not block this validation.</p>
+<h3>Before You Start</h3>
+<ul>
+<li>Save your site with <strong>one non-wildcard custom domain</strong>, such as <code>cdn.example.com</code>. Save any domain changes before using the ACME controls.</li>
+<li>Keep the existing delivery CNAME pointing to your Kontenum Site CNAME. DNS validation needs <strong>an additional CNAME</strong>, not a replacement for that delivery record.</li>
+<li>Make sure you can edit the domain's records at its DNS provider.</li>
+</ul>
+<p>Free SSL is off by default. DNS setup instructions appear after you enable it on a saved site.</p>
+<h3>Enable Free SSL and Add the CNAME</h3>
+<ol>
+<li>Open the site's settings and enable <strong>Automatic HTTPS Protection → Free SSL Certificate from Let’s Encrypt</strong>. This saves the activation immediately and performs an initial DNS check.</li>
+<li>In <strong>DNS validation</strong>, copy <strong>CNAME name</strong> and <strong>CNAME target</strong> using their Copy buttons.</li>
+<li>At your DNS provider, add a <strong>CNAME</strong> with exactly those values. Leave the delivery CNAME in place.</li>
+<li>Save the DNS record, return to the dashboard, and click <strong>Check DNS</strong>.</li>
+<li>If it remains <strong>Awaiting CNAME</strong>, confirm the record, allow time for DNS propagation, and click <strong>Check DNS</strong> again. If the lookup itself fails, the dashboard shows <strong>Unable to check DNS</strong>; try again without assuming the record is incorrect.</li>
+<li>Once <strong>Verified</strong>, certificate processing continues automatically when a certificate is needed. Keep the CNAME in place for future renewals.</li>
+</ol>
+<p><img src="/assets/images/acme-dns-01-setup.png" alt="Example of Free SSL enabled with Awaiting CNAME, DNS record fields, and the Check DNS button"></p>
+<p><em>Example using sample data. Copy the values from your own site's dashboard, not from this screenshot or the table below.</em></p>
+<table>
+<thead>
+<tr>
+<th>Domain</th>
+<th>Record type</th>
+<th>Target domain</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="text-nowrap">_acme-challenge.cdn.example.com</code></td>
+<td>CNAME</td>
+<td><code class="text-nowrap">_acme-challenge.a1b2c3d4e5f6.validation.example.net</code></td>
+</tr>
+</tbody>
+</table>
+<p><em>Scroll the table horizontally if needed to see the target domain.</em></p>
+<p>Some DNS providers append your zone name automatically. For a zone named <code>example.com</code>, the name field may therefore expect <code>_acme-challenge.cdn</code>. Check that the resulting full record name matches <strong>CNAME name</strong> in the dashboard. The record must publicly resolve to the displayed <strong>CNAME target</strong>. Kontenum manages the temporary TXT challenge; you do not need to create that TXT record yourself.</p>
+<div class="alert alert-info d-flex align-items-start" role="note">
+    <i class="ti ti-info-circle me-2"></i>
+    <div><strong>Initial setup needs your action.</strong> If the initial check cannot verify the CNAME, Free SSL stays enabled and waits. We do not keep checking it in the background. After adding or correcting the record, click <strong>Check DNS</strong> again. No DNS-01 certificate request starts until the prerequisite is verified.</div>
+</div>
+<h3>Understand the Status and Next Action</h3>
+<p>Free SSL activation, DNS verification, and the installed certificate are separate states. <strong>Verified</strong> confirms the delegation CNAME; it does not mean a certificate has already been issued. Check the processing status and installed certificate information separately.</p>
+<table>
+<thead>
+<tr>
+<th>What the dashboard shows</th>
+<th>What to do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Awaiting CNAME</strong> during initial setup</td>
+<td>Add or correct the record, allow propagation, then click <strong>Check DNS</strong>.</td>
+</tr>
+<tr>
+<td><strong>Verified</strong> and certificate processing in progress</td>
+<td>Wait for processing to finish. Keep the CNAME.</td>
+</tr>
+<tr>
+<td><strong>Automatic retry scheduled for …</strong></td>
+<td>Wait for the scheduled retry; no manual action is available while processing continues.</td>
+</tr>
+<tr>
+<td>Issuance failed and automatic retries stopped</td>
+<td>Use <strong>Retry certificate</strong>, or <strong>Check DNS and retry</strong> if DNS verification is needed.</td>
+</tr>
+<tr>
+<td><strong>Expired</strong> and no request is running</td>
+<td>Use <strong>Renew certificate</strong>, or <strong>Check DNS and renew</strong>, as shown.</td>
+</tr>
+<tr>
+<td>Setup maintenance needs attention</td>
+<td>Use <strong>Retry setup</strong> when shown. This finishes pending cleanup; it does not enable Free SSL.</td>
+</tr>
+</tbody>
+</table>
+<p>An installed certificate remains displayed during renewal problems. A failure email is a reminder to review the site; it does not always mean your CNAME is wrong. If DNS is already <strong>Verified</strong> and issuance still fails after retrying, contact <a href="mailto:support@kontenum.com">support</a> with the site name and displayed error.</p>
+<h3>Move an Existing HTTP-01 Site to DNS-01</h3>
+<p><strong>Leave Free SSL enabled - you do not need to switch it off and on.</strong> Add the additional CNAME from the DNS validation panel. You can click <strong>Check DNS</strong> to verify it now; otherwise, eligible legacy sites are checked when their renewal is scheduled.</p>
+<p>For a healthy site, verification selects DNS-01 for the next scheduled renewal without requesting an early replacement certificate. An HTTP-01 order already in progress keeps its original method; <strong>Current order method</strong> and <strong>Next renewal method</strong> can therefore differ temporarily.</p>
+<p>Add the CNAME before <strong>27 November 2026</strong> to keep automatic renewal available. Migration reminders may be sent up to five times per site: at launch, with 30, 14, and 7 days remaining, and at retirement. An existing certificate is not removed by migration or retirement, but HTTPS can fail if it expires before a successful renewal.</p>
+<hr>
+<p><span id="automatic-https-acme-lets-encrypt"></span></p>
+<h2>Automatic HTTPS with HTTP-01 - Deprecated</h2>
+<div class="alert alert-warning d-flex align-items-start" role="note">
+    <i class="ti ti-alert-triangle me-2"></i>
+    <div><strong>HTTP-01 is deprecated from 28 September 2026 and retires on 27 November 2026.</strong> These legacy instructions are retained during the 60-day migration period and are scheduled for removal after retirement. New activations use DNS-01. Follow <a href="#automatic-https-with-dns-01">the DNS-01 setup instructions above</a> to prepare your existing site.</div>
+</div>
+<h3>Legacy Setup</h3>
+<p>Before the DNS-01 launch, customers enabled <strong>Automatic HTTPS Protection → Free SSL Certificate from Let’s Encrypt</strong> in Site settings. The system then created an order, validated the domain over HTTP, generated the certificate request (CSR), and installed the certificate.</p>
+<p><img src="/assets/images/enable-acme.png" alt="Legacy HTTP-01 activation screen, retained for existing customers during migration"></p>
+<p><em>Legacy HTTP-01 screen. Use the DNS-01 instructions for new activations.</em></p>
+<p><span id="acme-validation-requirements"></span></p>
+<h3>Legacy Validation Requirements</h3>
+<p>Existing HTTP-01 validation requires:</p>
+<ul>
+<li>One <strong>non-wildcard delivery domain</strong> that is already active.</li>
+<li>A delivery <strong>CNAME pointing to your Kontenum Site CNAME</strong>.</li>
+<li>Public HTTP access to the validation request. ACL or georestriction rules can prevent HTTP-01 validation.</li>
+</ul>
+<p><img src="/assets/images/site-cname.png" alt="Delivery CNAME used by legacy HTTP-01 validation"></p>
+<p>If these prerequisites are not met, validation can fail and stop after its retry limit. Follow the recovery action displayed in Site settings.</p>
+<p>Legacy sites can continue HTTP-01 renewals during the migration period if DNS-01 delegation is not ready. From <strong>27 November 2026</strong>, no new HTTP-01 orders are created; existing orders may finish. Installed certificates are not revoked or removed on that date and retain their own expiration dates.</p>
+<hr>
+<h2>Automatic Renewal</h2>
+<p>For eligible sites with Free SSL enabled, automatic renewal is <strong>scheduled around 7 days before expiration</strong>. Keep both the delivery CNAME and validation CNAME in place. A site already using DNS-01 does not fall back to HTTP-01 if its validation CNAME is removed.</p>
+<p>Normally no manual action is needed while configuration is valid and processing succeeds. If issuance stops, a failure email may be sent to your company's contact person (PIC). Review the dashboard and use the recovery action shown; stopped requests do not retry indefinitely. An existing certificate remains installed during a renewal attempt, and DNS verification alone does not extend its expiration date.</p>
+<hr>
+<h2>ACME Certificates in Certificate List</h2>
+<p>All certificates issued via ACME:</p>
+<ul>
+<li>Appear in the <strong>Certificate Management</strong> list</li>
+<li>Are treated the same as <strong>manually uploaded certificates</strong></li>
+<li>Can be viewed, assigned, or replaced like any other certificate</li>
+</ul>
+<p>This ensures consistent management across all SSL methods.</p>
+<hr>
+<h2>Best Practices</h2>
+<ul>
+<li>Use <strong>ACME</strong> for simplicity and automatic renewal whenever possible</li>
+<li>Upload <strong>full CA bundles</strong> for manually managed certificates</li>
+<li>Monitor expiration emails and renew early if managing certificates manually</li>
+<li>Avoid wildcard delivery domains if you want automatic HTTPS</li>
+</ul>
+<hr>
+<p>If you encounter validation or trust issues, verify DNS configuration and certificate chain completeness before contacting support.</p>
+</div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 d-none d-md-block">
+                            <nav class="kb-toc">
+                                <h6 class="text-muted text-uppercase small mb-3">
+                                    On This Page
+                                </h6>
+                                <nav class="nav flex-column" id="toc-nav">
+                                    
+                                    <a class="nav-link toc-link" href="#overview">Overview</a>
+                                    
+                                    <a class="nav-link toc-link" href="#uploading-an-ssl-certificate-manual">Uploading an SSL Certificate (Manual)</a>
+                                    
+                                    <a class="nav-link toc-link" href="#certificate-management-status">Certificate Management &amp; Status</a>
+                                    
+                                    <a class="nav-link toc-link" href="#certificate-expiration-reminder">Certificate Expiration Reminder</a>
+                                    
+                                    <a class="nav-link toc-link" href="#automatic-https-with-dns-01">Automatic HTTPS with DNS-01</a>
+                                    
+                                    <a class="nav-link toc-link" href="#automatic-https-with-http-01---deprecated">Automatic HTTPS with HTTP-01 - Deprecated</a>
+                                    
+                                    <a class="nav-link toc-link" href="#automatic-renewal">Automatic Renewal</a>
+                                    
+                                    <a class="nav-link toc-link" href="#acme-certificates-in-certificate-list">ACME Certificates in Certificate List</a>
+                                    
+                                    <a class="nav-link toc-link" href="#best-practices">Best Practices</a>
+                                    
+                                </nav>
+                            </nav>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://node.kontenum.id/dist/js/vendor.js"></script>
+    <script src="/assets/js/app.js?v=5f386d5c"></script>
+    <script src="/assets/js/search.js?v=5708de1d"></script>
+</body>
+</html>
